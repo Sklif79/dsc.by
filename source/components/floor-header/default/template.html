@@ -1,0 +1,43 @@
+
+<div class="floor-header @@if(context.separator == true){floor-header--separator}">
+	<div class="floor-header__left @@if(!context.buttonleftText){floor-header__left--empty}">
+		@@if(context.buttonLeftText || context.buttonLeftLeftIcon || context.buttonLeftRightIcon) {
+		<a href="#" class="btn btn--sm">
+			@@if(context.buttonLeftLeftIcon) {
+			<svg class="btn__icon btn__icon--left svg-icon svg-icon--20"><use xlink:href="#@@buttonLeftLeftIcon"></use></svg>
+			}
+			@@if(context.buttonLeftText) {
+			<span class="btn__inner">@@buttonLeftText</span>
+			}
+			@@if(context.buttonLeftRightIcon) {
+			<svg class="btn__icon btn__icon--left svg-icon svg-icon--20"><use xlink:href="#@@buttonLeftRightIcon"></use></svg>
+			}
+		</a>
+		}
+	</div>
+	<div class="floor-header__main">
+		<h2>
+			@@if(context.link) {
+				<a href="@@link" class="floor-header__link">@@title</a>
+			}
+			@@if(!context.link) {
+				@@title
+			}
+		</h2>
+	</div>
+	<div class="floor-header__right @@if(!context.buttonRightText){floor-header__right--empty}">
+		@@if(context.buttonRightText || context.buttonRightLeftIcon || context.buttonRightRightIcon) {
+		<a href="#" class="btn btn--sm">
+			@@if(context.buttonRightLeftIcon) {
+			<svg class="btn__icon btn__icon--left svg-icon svg-icon--20"><use xlink:href="#@@buttonRightLeftIcon"></use></svg>
+			}
+			@@if(context.buttonRightText) {
+			<span class="btn__inner">@@buttonRightText</span>
+			}
+			@@if(context.buttonRightRightIcon) {
+			<svg class="btn__icon btn__icon--left svg-icon svg-icon--20"><use xlink:href="#@@buttonRightRightIcon"></use></svg>
+			}
+		</a>
+		}
+	</div>
+</div>

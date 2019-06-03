@@ -1,0 +1,24 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Услуги", 
+		"/services/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Компания", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Покупателям", 
+		"/customers/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+); 

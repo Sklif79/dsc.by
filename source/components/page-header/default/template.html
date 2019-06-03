@@ -1,0 +1,68 @@
+<page-header>
+	<page-header-top slot="top">
+		<folded-menu-header slot="top" name="Меню" close close-main-menu></folded-menu-header>
+		<page-header-top-item slot="top" icon="svg-icon-catalog" name="Каталог" top-menu-trigger></page-header-top-item>
+
+		<page-header-top-item slot="left" icon="svg-icon-delivery" name="Город доставки:" :value="geolocation.city.name">
+			<dropdown slot="dropdown" class="dropdown--city-select">
+				<folded-menu-header slot="folded-menu-header" name="Город доставки" back close-dropdown></folded-menu-header>
+				<city-select slot="content"></city-select>
+			</dropdown>
+		</page-header-top-item>
+		<page-header-top-item slot="left" link="#" class="hidden-sm">
+			<span slot="name">Бесплатная доставка по РБ от 15 руб.</span>
+			<!--<dropdown slot="dropdown" class="dropdown--contct-info">
+				<folded-menu-header slot="folded-menu-header" name="Контакты" back close-dropdown></folded-menu-header>
+				<div slot="content">
+					<h5 class="contact-info-title flc">Горячая линия</h5>
+					@@include("source/components/contact-info/default/template.html")
+				</div>
+			</dropdown>-->
+		</page-header-top-item>
+		<page-header-top-item slot="left" icon="svg-icon-location" name="Адреса магазинов" link="#"></page-header-top-item>
+
+		<page-header-top-item v-if="authorized" slot="right" :name="'Добро пожаловать, ' + user.name" 
+				class="page-header-top-item--hidden-folded hidden-md"></page-header-top-item>
+		<page-header-top-item v-if="authorized" slot="right" icon="svg-icon-user" name="Личный кабинет">
+			<dropdown slot="dropdown" class="dropdown--personal-menu">
+				<folded-menu-header slot="folded-menu-header" name="Личный кабинет" back close-dropdown></folded-menu-header>
+				<personal-menu-sm slot="content"></personal-menu-sm>
+			</dropdown>
+		</page-header-top-item>
+		<page-header-top-item slot="left" icon="svg-icon-phone" name="Контакты" class="hidden">
+			<dropdown slot="dropdown" class="dropdown--contct-info">
+				<folded-menu-header slot="folded-menu-header" name="Контакты" back close-dropdown></folded-menu-header>
+				<div slot="content">
+					<h5 class="contact-info-title flc">Горячая линия</h5>
+					@@include("source/components/contact-info/default/template.html")
+				</div>
+			</dropdown>
+		</page-header-top-item>
+		<page-header-top-item v-if="!authorized" slot="right" icon="svg-icon-user" name="Войти">
+			<dropdown slot="dropdown" class="dropdown--sign">
+				<folded-menu-header slot="folded-menu-header" name="Личный кабинет" back close-dropdown></folded-menu-header>
+				<sign-sm slot="content"></sign-sm>
+			</dropdown>
+		</page-header-top-item>
+	</page-header-top>
+
+	<page-header-main-2 slot="main">
+		<a href="#" class="logo" slot="logo">
+			<svg class="svg-icon hidden-xs"><use xlink:href="#svg-icon-logo"></use></svg>
+			<svg class="svg-icon hidden visible-xs"><use xlink:href="#svg-icon-logo-xs"></use></svg>
+		</a>
+		<top-search-2 slot="search" placeholder="Поиск по товарам" button-icon="svg-icon-search" close-icon="svg-icon-close"></top-search-2>
+		<a href="tel:+375293874733" class="page-header-info-block hidden-md" slot="right-1">
+			<div class="page-header-info-block__cell-icon">
+				<svg class="svg-icon svg-icon--20"><use xlink:href="#svg-icon-phone"></use></svg>
+			</div>
+			<div class="page-header-info-block__cell-info"><div class="strong">+375 29 387-47-33</div> <span class="c-gray-dark">Пн–пт с 9:00 до 18:00</span></div>
+		</a>
+		<wishlist-sm slot="right-2"></wishlist-sm>
+		<basket-sm slot="right-3" show-dropdown show-dropdown-min="sm-min"></basket-sm>
+	</page-header-main-2>
+
+	<nav class="page-header-menu js-main-menu" slot="nav">
+		@@include("source/components/page-header-menu/default/template.html", {"headless": true})
+	</nav>
+</page-header>

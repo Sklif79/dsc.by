@@ -1,0 +1,22 @@
+/* --- number-input --- */
+.number-input{position: relative; min-width: 50px;}
+.number-input__minus{position: absolute; top: 0; left: 0; z-index: 5;}
+.number-input__plus{position: absolute; top: 0; right: 0; z-index: 5;}
+.number-input__input .rich-text-input__input{padding-left: 20px; padding-right: 20px; text-align: center;}
+.number-input__btn{width: 15px; height: 40px; background: transparent; position: relative; cursor: pointer; padding: 0; display: block;}
+.number-input__btn::before{content: ''; position: absolute; top: 50%;
+    width: 14px;
+    height: 2px;
+    background-color: #9D9D9D;}
+.number-input__btn--plus::before{left: auto; right: 7px;}
+.number-input__btn--plus::after{content: ''; position: absolute; top: 50%;
+    right: 13px;
+    height: 14px;
+    width: 2px;
+    margin-top: -6px;
+    background-color: #9D9D9D;}
+.number-input--lg .number-input__btn{height: 50px; width: 20px;}
+
+.number-input__input.basket-action--big .text-input, .number-input__input.basket-action--big .number-input__btn {
+    height: 40px;
+}

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite">
+
+<style>
+	path, polygon{stroke: currentColor; fill: currentColor; stroke-width: 0;}
+</style>
+
+<symbol id="svg-icon-logo" viewBox="0 0 220 60">
+	<rect fill="#3678c9" x="0" y="0" width="220" height="60"/>
+</symbol>
+
+<symbol id="svg-icon-placeholder" viewBox="0 0 20 20">
+	<rect fill="currentColor" x="0" y="0" width="20" height="20"/>
+</symbol>
+
+<symbol id="svg-icon-search" viewBox="0 0 20 20">
+	<rect fill="currentColor" x="0" y="0" width="20" height="20"/>
+</symbol>
+
+<symbol id="svg-icon-dd-arrow" viewBox="0 0 10 10">
+	<rect fill="currentColor" x="0" y="0" width="10" height="10"/>
+</symbol>
+
+<symbol id="svg-icon-remove" viewBox="0 0 20 20">
+	<rect fill="currentColor" x="0" y="0" width="20" height="20"/>
+</symbol>
+
+<symbol id="svg-icon-slider-left" viewBox="0 0 30 30">
+	<rect fill="currentColor" x="0" y="0" width="30" height="30"/>
+</symbol>
+
+<symbol id="svg-icon-slider-right" viewBox="0 0 30 30">
+	<rect fill="currentColor" x="0" y="0" width="30" height="30"/>
+</symbol>
+
+</svg>

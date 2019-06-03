@@ -1,0 +1,23 @@
+/* --- fav btn --- */
+.fav-btn{display: table; cursor: pointer; max-width: 100%; table-layout: fixed; font-size: $fz-small; line-height: 20px; 
+	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.fav-btn__icon{display: table-cell; vertical-align: top; width: 30px; padding-right: 10px;}
+.fav-btn__icon:last-child{padding-right: 0; width: 20px;}
+.fav-btn__text-count{color: $color-gray-dark; margin-left: 4px;}
+.fav-btn__icon-group{display: inline-block; vertical-align: top; position: relative;}
+.fav-btn__icon-group .svg-icon,
+.fav-btn__icon-group .fav-btn__icon-spinner{color: $color-primary; vertical-align: top; width: 20px; height: 20px; transition: $transition-base;}
+.fav-btn__icon-group .svg-icon{opacity: .7;}
+.fav-btn__icon-in-fav,
+.fav-btn__icon-spinner{position: absolute; top: 0; left: 0;
+	-webkit-transform: scale(0); transform: scale(0); visibility: hidden;}
+.fav-btn.active .fav-btn__icon-in-fav{-webkit-transform: scale(1); transform: scale(1); visibility: visible;}
+.fav-btn.active .fav-btn__icon-not-in-fav{-webkit-transform: scale(0); transform: scale(0); visibility: hidden;}
+
+.fav-btn.loading .fav-btn__icon-in-fav,
+.fav-btn.loading .fav-btn__icon-not-in-fav{-webkit-transform: scale(0); transform: scale(0); visibility: hidden;}
+.fav-btn.loading .fav-btn__icon-spinner{-webkit-transform: scale(1); transform: scale(1); visibility: visible;}
+
+.no-touch .fav-btn:hover .fav-btn__icon-group .svg-icon{opacity: 1;}
+.no-touch .fav-btn:hover .fav-btn__icon-group .fav-btn__icon-in-fav{color: $color-primary-2;}
+.no-touch .fav-btn:active .fav-btn__icon-group .fav-btn__icon-in-fav{color: $color-primary-3;}

@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О компании", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Преимущества", 
+		"/about/benefits/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"История", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Политика", 
+		"/about/?tab=political", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Сертификаты", 
+		"/about/?tab=sertificats", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

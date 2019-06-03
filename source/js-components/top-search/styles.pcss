@@ -1,0 +1,44 @@
+/* --- top search --- */
+.top-search{position: relative; width: 100%; white-space: normal;}
+.top-search.active{z-index: 110;}
+.top-search .folded-menu-header{display: none;}
+.top-search__row{display: table; width: 100%;}
+.top-search__cell-input{display: table-cell; vertical-align: top; width: 99%; padding-right: 1px;}
+.top-search__cell-filter,
+.top-search__cell-action{display: table-cell; vertical-align: top; width: 1px;}
+/*.top-search__cell-input .text-input{border-top-right-radius: 0; border-bottom-right-radius: 0;}*/
+.top-search__cell-filter .select{border-radius: 0; width: 220px;}
+.top-search__cell-action .btn{border-bottom-left-radius: 0; border-top-left-radius: 0; z-index: 31;}
+.top-search__btn{padding-left: 10px; padding-right: 10px;}
+.top-search__btn .svg-icon{width: 20px; height: 20px;}
+.top-search__btn,
+.no-touch .top-search__btn:hover,
+.no-touch .top-search__btn:active,
+		  .top-search__btn:active{border-color: transparent; box-shadow: none;}
+
+.top-search__row .text-input,
+.top-search__row .select,
+.top-search__row .btn{ background-color: $color-white; box-shadow: none;}
+.top-search__row .select{margin-right: -40px; padding-right: calc($input-padding-h + 40px + 16px);}
+.top-search__row .select .select-chevron{right: 40px;}
+/*.top-search .select .select-value{color: $color-white;}*/
+.no-touch .top-search__row:hover .text-input,
+		  .top-search__row.active .text-input,
+.no-touch .top-search__row:hover .select,
+		  .top-search__row.active .select,
+.no-touch .top-search__row:hover .btn,
+		  .top-search__row.active .btn{background-color: $color-white}
+
+.top-search__row .text-input::-webkit-input-placeholder{color: rgba(0,0,0,.5);}
+.top-search__row .text-input::-moz-placeholder{color: rgba(0,0,0,.5);}
+.top-search__row .text-input:-moz-placeholder{color: rgba(0,0,0,.5);}
+.top-search__row .text-input:-ms-input-placeholder{color: rgba(0,0,0,.5);}
+
+.top-search-open .top-search{z-index: 116;}
+
+
+
+@media (max-width: $screen-sm-max) {
+	/* --- top search --- */
+	.top-search__cell-filter{display: none;}
+}

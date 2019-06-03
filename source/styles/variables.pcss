@@ -1,0 +1,698 @@
+/*
+	variable naming rules:
+	color-* -- color value
+	fz-* -- font-size value
+	fw-* -- font-weight value
+	ff-* -- font-family value
+	fs-* -- font-style value
+	*-color -- color of specific element
+	*-bg -- background of specific element
+	...
+*/
+
+/* --- sizes --- */
+$container-width: 1350px;
+$container-width-unitless: 1250;
+$container-padding: 25px;
+$container-padding-sm: 20px;
+$container-padding-xs: 10px;
+$padding-base: 25px;
+$padding-base-large: 50px;
+$padding-base-sm: 20px;
+$padding-base-sm-large: 20px;
+$screen-lg-min: 1250px;
+$screen-md-max: 1249px;
+$screen-md-mid: 1149px;
+$screen-md-min: 1000px;
+$screen-sm-max: 999px;
+$screen-sm-min: 760px;
+$screen-xs-max: 759px;
+$screen-xs-min: 640px;
+$screen-2xs-max: 599px;
+$screen-2xs-min: 480px;
+$screen-3xs-max: 479px;
+$screen-3xs-min: 360px;
+$screen-4xs-max: 359px;
+$screen-4xs-min: 0px;
+
+
+
+/* --- colors --- */
+$color-red: #E52421;
+$color-black: #313131;
+$color-white: #fff;
+$color-gray: rgba(119, 119, 119, 0.5);
+$color-gray-dark: #959595;
+$color-gray-light: #F1F3F4;
+$color-gray-light-2: #F8F8F8;
+$color-primary: #E52421;
+$color-primary-2: #de4d4b;
+$color-primary-3: #3dcd58;
+$color-primary-alt: #4683C4;
+$color-primary-alt-2: #137dba;
+$color-primary-alt-3: #137dba;
+$color-success: #55974d;
+$color-warning: #cebc20;
+$color-error: #ed1920;
+$color-error-light: #fee8ef;
+
+$text-color: $color-black;
+$link-color: $color-black;
+$link-border: 0;
+$link-color-hover: $color-black;
+$link-border-hover: 1px solid $color-red;
+$link-border-black-empty: 1px solid rgba(0,0,0,0);
+
+$selection-color: $color-white;
+$selection-bg: $color-primary-alt;
+
+$body-bg: $color-white;
+$prefooter-bg: #4683C4;
+$prefooter-color: $color-white;
+$prefooter-separator-color: transparent;
+$prefooter-separator-color-xs: transparent;
+$prefooter-item-container-width: 960px;
+
+$focus-border-base: 1px dashed $color-black;
+
+
+
+/* --- text --- */
+$ff-base: 'Roboto', Arial, Helvetica, sans-serif;
+$fw-light: 400;
+$fw-regular: 600;
+$fw-base: $fw-light;
+$fw-bold: 600;
+$fw-small: $fw-base;
+$fw-strong: $fw-base;
+$fz-base: 16px;
+$lh-base: 24px;
+$fz-small: 14px;
+$lh-small: 20px;
+$fz-xs: 12px;
+$lh-xs: 18px;
+$fz-large: 26px;
+$lh-large: 26px;
+
+$ff-h1: $ff-base;
+$fz-h1: 38px;
+$fw-h1: $fw-bold;
+$lh-h1: 46px;
+$tt-h1: none;
+$ls-h1: normal;
+
+$ff-h2: $ff-base;
+$fz-h2: 26px;
+$fw-h2: $fw-bold;
+$lh-h2: 34px;
+$tt-h2: none;
+$ls-h2: normal;
+
+$ff-h3: $ff-base;
+$fz-h3: 18px;
+$fw-h3: $fw-bold;
+$lh-h3: 24px;
+$tt-h3: none;
+$ls-h3: normal;
+
+$ff-h4: $ff-base;
+$fz-h4: 20px;
+$fw-h4: $fw-regular;
+$lh-h4: 30px;
+$tt-h4: none;
+$ls-h4: normal;
+
+$ff-h5: $ff-base;
+$fz-h5: 16px;
+$fw-h5: $fw-bold;
+$lh-h5: 26px;
+$tt-h5: none;
+$ls-h5: normal;
+
+$fz-small-xs: $fz-small;
+$lh-small-xs: $lh-small;
+$fz-large-xs: $fz-large;
+$lh-large-xs: $lh-large;
+$fw-base-xs: $fw-base;
+
+$fz-h1-xs: calc($fz-base * 26 / 16);
+$lh-h1-xs: calc($lh-base * 30 / 24);
+$fz-h2-xs: calc($fz-base * 22 / 16);
+$lh-h2-xs: calc($lh-base * 28 / 24);
+$fz-h3-xs: calc($fz-base * 18 / 16);
+$lh-h3-xs: calc($lh-base * 28 / 24);
+$fz-h4-xs: $fz-base;
+$lh-h4-xs: $lh-base;
+
+$text-margin-base: 14px;
+$text-margin-p: $text-margin-base 0;
+$text-margin-h1: $text-margin-base 0;
+$text-margin-h2: $text-margin-base 0;
+$text-margin-h3: $text-margin-base 0;
+$text-margin-h4: $text-margin-base 0;
+$text-margin-h5: $text-margin-base 0;
+
+$text-margin-p-xs: 10px 0;
+$text-margin-h1-xs: 10px 0;
+$text-margin-h2-xs: 10px 0;
+$text-margin-h3-xs: 10px 0;
+$text-margin-h4-xs: 10px 0;
+$text-margin-h5-xs: 10px 0;
+
+
+
+/* --- transitions --- */
+$transition-base: .3s;
+$transition-link: .1s;
+$transition-input: $transition-base;
+$transition-btn: $transition-base;
+$transition-dropdown: .3s;
+$transition-main-menu: $transition-dropdown;
+
+
+
+/* --- border --- */
+$border-radius-base: 4px;
+$border-radius-large: 8px;
+$border-radius-xl: 8px;
+$border-radius-dropdown: $border-radius-base;
+
+
+
+/* --- shadow --- */
+$box-shadow-base: 0 1px 8px rgba(0,0,0,0.2);
+
+
+
+/* --- logo --- */
+$logo-color: $color-primary;
+$logo-color-hover: $color-primary-2;
+$logo-width: 180px;
+$logo-height: 86px;
+$logo-width-md: 100px;
+$logo-width-sm: 100px;
+$logo-width-xs: 120px;
+$logo-width-2xs: 110px;
+$logo-height-md: $logo-height;
+$logo-height-sm: 55px;
+$logo-height-xs: 50px;
+$logo-height-2xs: 45px;
+$logo-opacity-hover: 1;
+
+
+/* --- grid --- */
+$grid-gutter-base: 25px;
+$grid-gutter-base-sm: 20px;
+$grid-gutter-large: 50px;
+
+
+
+/* --- overlay --- */
+$overlay-transition: .3s;
+$overlay-bg: rgba(0,0,0,.7);
+
+
+
+/* --- input --- */
+$input-height-base: 40px;
+$input-height-lite: 40px;
+$input-height-sm: 30px;
+$textarea-height-base: 140px;
+$input-fz: $fz-small;
+$input-fz-sm: $fz-small;
+$input-fw: $fw-base;
+$input-fw-sm: $fw-base;
+$input-lh: 26px;
+$input-lh-sm: 26px;
+$input-label-fz: $input-fz;
+$input-label-lh: $input-lh;
+$input-label-fw: 600;
+$input-label-margin: 10px;
+$input-folded-label-fz: $fz-small;
+$input-folded-label-lh: $lh-small;
+$input-folded-label-pt: 0;
+$input-folded-label-pb: 0;
+$input-border: 1px solid $color-gray;
+$input-border-width: 1px;
+$input-dynamic-label-mode: false;
+$input-border-bottom-mode: false;
+$input-border-radius: 4px;
+$input-border-color-hover: $color-primary-alt;
+$input-border-color-focus: $color-primary-alt;
+$input-border-color-disabled: $color-gray;
+$input-color: $text-color;
+$input-color-disabled: $color-gray-dark;
+$input-bg: $color-white;
+$input-bg-hover: transparent;
+$input-bg-focus: transparent;
+$input-bg-disabled: #f3f3f3;
+$input-shadow: none;
+$input-shadow-hover: none;
+$input-shadow-focus: none;
+$input-padding-h: 10px;
+$input-padding-t: 6px;
+$input-padding-b: 6px;
+$input-padding-h-ph: 10px;
+$input-padding-t-ph: 12px;
+$input-padding-b-ph: 12px;
+$input-padding-h-lite: 15px;
+$input-padding-t-lite: 6px;
+$input-padding-b-lite: 6px;
+$input-padding-h-sm: 10px;
+$input-padding-t-sm: 1px;
+$input-padding-b-sm: 1px;
+$input-placeholder-color: #777777;
+$input-placeholder-color-hover: $color-gray-dark;
+$input-placeholder-color-focus: $color-gray-dark;
+$input-placeholder-color-filled: $color-gray-dark;
+$input-placeholder-color-disabled: $color-gray-dark;
+
+$input-white-color: $color-white;
+$input-white-placeholder-color: rgba(255,255,255,.7);
+$input-white-border-color: rgba(255,255,255,.7);
+$input-white-border-color-hover: rgba(255,255,255,1);
+$input-white-border-color-focus: rgba(255,255,255,1);
+
+
+
+/* --- buttons --- */
+$btn-height: 40px;
+$btn-height-sm: 40px;
+$btn-height-lg: 50px;
+$btn-ff: $ff-base;
+$btn-fz: 14px;
+$btn-fz-sm: 14px;
+$btn-fz-lg: $fz-base;
+$btn-lh: 30px;
+$btn-lh-sm: 24px;
+$btn-lh-lg: 24px;
+$btn-fw: 400;
+$btn-fw-sm: 400;
+$btn-fw-lg: $fw-bold;
+$btn-lh-sm: 24px;
+$btn-lh-lg: 24px;
+$btn-tt: none;
+$btn-tt-sm: none;
+$btn-tt-lg: none;
+$btn-bg: transparent;
+$btn-bg-hover: $color-primary-2;
+$btn-bg-active: $color-primary-2;
+$btn-color: #9D9D9D;
+$btn-color-hover: $color-white;
+$btn-color-active: $color-white;
+$btn-border-width: 1px;
+$btn-border-color: #9D9D9D;
+$btn-border-radius: 2px;
+$btn-border-radius-sm: 2px;
+$btn-border-radius-lg: $border-radius-base;
+$btn-border-color-hover: $color-primary-2;
+$btn-border-color-active: $color-primary-2;
+$btn-shadow: 0px 0px 0px 1px rgba(255,255,255,0) inset;
+$btn-shadow-hover: 0px 0px 0px 1px rgba(255,255,255,0) inset;
+$btn-shadow-active: none;
+
+$btn-info-bg: $color-primary;
+$btn-info-bg-hover: $color-primary-2;
+$btn-info-bg-active: $color-primary-3;
+$btn-info-color: $color-white;
+$btn-info-color-hover: $color-white;
+$btn-info-color-active: $color-white;
+$btn-info-border-width: 1px;
+$btn-info-border-color: $color-primary;
+$btn-info-border-radius: $btn-border-radius;
+$btn-info-border-color-hover: $color-primary-2;
+$btn-info-border-color-active: $color-primary-3;
+$btn-info-shadow: none;
+$btn-info-shadow-hover: none;
+$btn-info-shadow-active: none;
+
+$btn-primary-bg: $color-primary-alt;
+$btn-primary-bg-hover: $color-primary-2;
+$btn-primary-bg-active: $color-primary-3;
+$btn-primary-color: $color-white;
+$btn-primary-color-hover: $color-white;
+$btn-primary-color-active: $color-white;
+$btn-primary-border-width: 0;
+$btn-primary-border-color: $color-primary;
+$btn-primary-border-radius: $btn-border-radius;
+$btn-primary-border-color-hover: $color-primary-alt;
+$btn-primary-border-color-active: $color-primary-3;
+$btn-primary-shadow: none;
+$btn-primary-shadow-hover: none;
+$btn-primary-shadow-active: none;
+
+$btn-secondary-bg: transparent;
+$btn-secondary-bg-hover: $color-gray-dark;
+$btn-secondary-bg-active: $color-gray-dark;
+$btn-secondary-color: $color-gray-dark;
+$btn-secondary-color-hover: $color-white;
+$btn-secondary-color-active: $color-white;
+$btn-secondary-border-width: 1px;
+$btn-secondary-border-color: $color-gray;
+$btn-secondary-border-radius: $btn-border-radius;
+$btn-secondary-border-color-hover: $color-gray-dark;
+$btn-secondary-border-color-active: $color-gray-dark;
+$btn-secondary-shadow: none;
+$btn-secondary-shadow-hover: none;
+$btn-secondary-shadow-active: none;
+
+$btn-white-bg: transparent;
+$btn-white-bg-hover: transparent;
+$btn-white-bg-active: $color-white;
+$btn-white-color: $color-white;
+$btn-white-color-hover: $color-white;
+$btn-white-color-active: $color-black;
+$btn-white-border-width: 1px;
+$btn-white-border-color: $color-white;
+$btn-white-border-radius: $border-radius-base;
+$btn-white-border-color-hover: $color-white;
+$btn-white-border-color-active: $color-white;
+$btn-white-shadow: none;
+$btn-white-shadow-hover: 0px 0px 0px 1px $btn-white-border-color inset;
+$btn-white-shadow-active: none;
+
+$btn-padding-h: 20px;
+$btn-padding-v: 4px;
+$btn-padding-h-sm: 20px;
+$btn-padding-v-sm: 2px;
+$btn-padding-h-lg: 30px;
+$btn-padding-v-lg: 12px;
+
+
+
+/* --- page main --- */
+$page-main-offset: 0;
+$page-main-offset-sm: 0;
+
+
+
+/* --- floor --- */
+$floor-separator-color: $color-gray;
+$floor-header-width: 700px;
+$floor-header-max-width: calc(100% - 100px);
+$floor-header-margin: 40px;
+$floor-header-separator-color: $color-gray-light;
+$floor-header-separator-spacing: $padding-base;
+$floor-header-link-color: $text-color;
+$floor-header-link-color-hover: $link-border;
+$floor-header-link-border: $link-border;
+$floor-header-link-border-hover: $link-border-hover;
+
+
+
+/* --- complex link */
+$complex-link-icon-color: $color-primary;
+$complex-link-icon-color-hover: $color-white;
+$complex-link-badge-bg: $color-primary-alt;
+$complex-link-badge-color: $color-white;
+
+
+
+/* --- dropdown --- */
+$dropdown-padding-base-v: 20px;
+$dropdown-padding-base-h: 20px;
+
+
+/* --- slider --- */
+$slider-height: 465px;
+$slide-height: $slider-height;
+$slider-padding: 50px;
+$slider-padding-sm: 50px;
+$slider-padding-xs: 20px 20px 50px;
+$slider-border: 7px solid $color-primary;
+$slider-border-width: 7px;
+$slider-border-radius: 0;
+$slider-arrow-width: 35px;
+$slider-arrow-height: 35px;
+$slider-arrow-border: none;
+$slider-arrow-border-radius: 50%;
+$slider-arrow-prev-border-radius: $slider-arrow-border-radius;
+$slider-arrow-next-border-radius: $slider-arrow-border-radius;
+$slider-arrow-bg: $color-white;
+$slider-arrow-bg-hover: $color-gray;
+$slider-arrow-bg-active: $color-gray-dark;
+$slider-arrow-bg-disabled: $color-gray-light-2;
+$slider-arrow-color: #9D9D9D;
+$slider-arrow-color-hover: $color-black;
+$slider-arrow-color-active: $color-white;
+$slider-arrow-color-disabled: $color-gray-light;
+$slider-arrow-icon-width: 8px;
+$slider-arrow-icon-height: 16px;
+$slider-arrow-transform: false;
+$slider-arrow-grow: false;
+$slider-dots-bg: $color-white;
+$slider-dots-bg-active: #4683C4;
+$slider-dots-bg-hover: $color-gray-light;
+$slider-dots-bg-active-hover: rgba(37,37,37,1);
+$slider-dots-bg-hover-transform: none;
+$slider-dots-bg-active-transform: none;
+$slider-dots-size: 12px;
+$slider-dots-border: 1px solid #D4D4D4;
+$slider-dots-border-hover: 0;
+$slider-dots-border-active: 0;
+$slider-dots-border-active-hover: 0;
+$slider-dots-border-radius: 50%;
+$slider-dots-offset: 40px;
+$slider-dots-offset-outside: 30px;
+$slider-dots-offset-outside-xs: 30px;
+$slider-dots-margin: 9px;
+$slider-dots-margin-xs: 9px;
+$slider-image-transition: $transition-base;
+$slider-shadow-hover: $box-shadow-base;
+$slider-image-scale: 1.1;
+
+
+/* --- slide --- */
+$slide-overlay-bg-light: rgba(255,255,255,.4);
+$slide-overlay-bg-dark: rgba(0,0,0,.4);
+
+
+
+/* --- block banner --- */
+$block-banner-image-transition: $transition-base;
+$block-banner-image-shadow: none;
+$block-banner-image-shadow-hover: $box-shadow-base;
+$block-banner-scale: 1.105;
+$block-banner-opacity-hover: 1;
+$block-banner-height-unitless: 200;
+$block-banner-height: 200px;
+$block-banner-title-color: $text-color;
+$block-banner-title-color-hover: $link-color-hover;
+$block-banner-title-border: $link-border;
+$block-banner-title-border-hover: $link-border-hover;
+$block-banner-label-bg: $color-primary-alt;
+$block-banner-label-color: $color-white;
+$block-banner-label-border-radius: 0 0 $border-radius-base 0;
+
+
+
+/* --- arrow --- */
+$dropdown-arrow-size: 6px;	/* dropdown block white triangle*/
+$dropdown-arrow-size-v: 6px;
+$dropdown-arrow-size-h: 6px;
+$dd-arrow-width: 10px;
+$dd-arrow-height: 10px;
+
+
+
+/* --- product --- */
+$product-padding: 20px;
+$product-image-ratio: 100%;
+$product-image-max-width: 240px;
+$product-name-fw: $fw-light;
+$product-bg: rgba(255,255,255,0);
+
+
+
+
+/* --- advantages --- */
+$advantages-bg: transparent;
+$advantages-color: $text-color;
+$advantages-padding: $padding-base 0;
+$advantages-img-size: 50px;
+
+
+
+/* --- page header top --- */
+$header-top-bg: $color-white;
+$header-top-padding: 0 0;
+$header-top-height: 44px;
+$header-top-item-height: 44px;
+$header-top-item-fz: 14px;
+$header-top-item-color: $color-black;
+$header-top-item-color-hover: $color-primary-alt;
+$header-top-icons-color: $color-gray-dark;
+$header-top-icons-color-hover: $color-primary-alt;
+$header-top-border-bottom: 1px solid $color-gray-light;
+
+
+
+/* --- page header main --- */
+$header-main-bg: $color-white;
+$header-main-border-bottom: none;
+$header-main-border-bottom-sm: 1px solid $color-gray-light;
+$header-main-border-bottom-xs: 1px solid $color-gray-light;
+$header-main-ph-height: 110px;
+$header-main-ph-height-md: 110px;
+$header-main-ph-height-sm: 80px;
+$header-main-ph-height-xs: 80px;
+$header-main-padding-v: 30px;
+$header-main-padding-v-sm: 25px;
+
+
+
+/* --- menu btn --- */
+$menu-btn-width: 40px;
+$menu-btn-height: 40px;
+$menu-btn-color: $color-primary;
+$menu-btn-color-hover: $color-primary-alt;
+$menu-btn-bg: transparent;
+$menu-btn-bg-hover: transparent;
+$menu-btn-opacity-hover: 1;
+$menu-btn-bar-height: 2px;
+$menu-btn-bar-width: 20px;
+$menu-btn-bar-radius: 0px;
+$menu-btn-bar-spacing: 7px;
+$menu-btn-bar-out: 10px;
+
+
+
+/* --- page header menu --- */
+$header-menu-bg: #DAE6F3;
+$header-menu-border-bottom: none;
+$header-menu-border-bottom-width: 0px;
+$header-menu-link-color: $color-black;
+$header-menu-link-color-hl: $color-primary-alt;
+$header-menu-link-color-hover: #e52421;
+$header-menu-link-color-hl-hover: $color-primary-alt;
+$header-menu-link-border-color-hover: $color-primary-alt;
+$header-menu-link-height: 40px;
+$header-menu-link-fw: 300;
+$header-menu-link-fz: $fz-small;
+$header-menu-link-lh: $lh-small;
+$header-menu-gutter: 0;
+$header-menu-gutter-md: 10px;
+$header-menu-gutter-sm: 10px;
+$header-menu-alignment: flex-start;
+$header-menu-max-column-count: 5;
+
+
+
+/* --- page header menu and top folding --- */
+$screen-header-menu-folding: $screen-sm-max;
+$screen-header-top-folding: $screen-sm-max;
+$header-menu-folded-shadow: $box-shadow-base;
+$header-menu-folded-width: 300px;
+$header-menu-folded-offset: 20px;
+$header-menu-folded-transition: .3s;
+$header-menu-folded-bg: $color-white;
+
+
+
+/* --- folded menu item --- */
+$folded-menu-item-padding: 10px;
+$folded-menu-item-border-width: 1px;
+$folded-menu-item-border-color: $color-gray-light;
+$folded-menu-item-color: $color-black;
+$folded-menu-item-bg: $color-white;
+$folded-menu-item-fz: $fz-base;
+$folded-menu-item-lh: $lh-base;
+$folded-menu-item-fw: $fw-base;
+$folded-menu-item-tt: none;
+
+$folded-menu-heading-padding: 10px 40px 10px 0;
+$folded-menu-heading-fz: $fz-base;
+$folded-menu-heading-lh: $lh-base;
+$folded-menu-heading-fw: $fw-bold;
+$folded-menu-heading-bg: $color-gray-light;
+$folded-menu-heading-ta: center;
+$folded-menu-heading-tt: none;
+$folded-menu-heading-color: $color-black;
+$folded-menu-heading-btn-height: calc($folded-menu-heading-lh + 20px);
+$folded-menu-heading-btn-width: 40px;
+$folded-menu-heading-btn-bg: transparent;
+$folded-menu-heading-btn-bg-hover: transparent;
+$folded-menu-heading-btn-color: $color-primary;
+$folded-menu-heading-btn-color-hover: $color-primary-alt;
+
+
+
+/* --- top search --- */
+$screen-top-search-folding: $screen-xs-max;
+
+
+
+/* --- top search lite --- */
+$top-search-lite-transition: .3s;
+
+
+
+/* --- page footer --- */
+$footer-bg: $color-gray-light-2;
+$footer-fw: $fw-base;
+$footer-color: $color-black;
+$footer-border-top: none;
+$footer-title-color: $color-black;
+$footer-title-margin: 12px;
+$footer-link-color: $color-black;
+$footer-link-border: 1px solid transparent;
+$footer-link-color-hover: $link-color-hover;
+$footer-link-border-hover: 1px solid;
+$footer-link-margin: 10px;
+$footer-note-color: $color-gray-dark;
+$footer-separator-color: $color-gray;
+$footer-bottom-color: $color-gray-dark;
+
+
+
+/* --- social --- */
+$social-links-gutter: 15px;
+$social-link-bg: transparent;
+$social-link-color: $color-primary;
+$social-link-color-hover: $color-primary-alt;
+$social-link-color-active: $color-primary-alt;
+$social-link-border: none;
+$social-link-border-hover: none;
+$social-link-border-active: none;
+$social-link-border-radius: 0;
+$social-link-icon-width: 40px;
+$social-link-icon-height: 40px;
+$social-link-width: 40px;
+
+
+
+/* --- label action --- */
+$label-action-label-fz: $fz-h5; 
+$label-action-label-fw: $fw-h5; 
+$label-action-label-lh: $lh-h5; 
+$label-action-label-tt: $tt-h5; 
+$label-action-label-ls: $ls-h5;
+
+
+
+/* --- price --- */
+$price-spacing: 8px;
+$price-curr-spacing: 4px;
+$price-old-fw: $fw-base;
+$price-old-fz: $fz-small;
+$price-old-lh: $lh-small;
+$price-old-color: $text-color;
+$price-main-fw: $fw-bold;
+$price-main-fz: $fz-base;
+$price-main-lh: $lh-base;
+$price-main-color: $color-primary-alt;
+$price-curr-fw: $fw-bold;
+$price-curr-fz: $fz-base;
+$price-curr-lh: $lh-base;
+$price-curr-color: $color-primary-alt;
+$price-new-fw: $price-main-fw;
+$price-new-fz: $price-main-fz;
+$price-new-lh: $price-main-lh;
+$price-new-color: $color-primary-alt;
+$price-new-curr-color: $color-primary-alt;
+
+
+/* --- simple infogr block --- */
+$simple-infogr-block-icon-offset: 20px;
+$simple-infogr-block-icon-width: 50px;
+$simple-infogr-block-icon-height: 50px;

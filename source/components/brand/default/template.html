@@ -1,0 +1,19 @@
+
+<div class="brand">
+	<div class="brand__name flc">
+		@@if(context.name) {
+		<a href="#" class="brand__name-link link h3">@@name</a>
+		}
+		@@if(!context.name) {
+		<a href="#" class="brand__name-link link h3">Бренд 1</a>
+		}
+	</div>
+	<div class="brand__count flc">15 товаров</div>
+	<div class="brand__price price flc">
+		<small>от </small>
+		<strong>40 </strong>
+		<small>до </small>
+		<strong>60 </strong>
+		<small>руб.</small>
+	</div>
+</div>

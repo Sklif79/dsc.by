@@ -1,0 +1,21 @@
+
+<div class="complex-link">
+	<a href="#" class="complex-link__link">
+		<div class="complex-link__cell-icon">
+			<div class="complex-link__icon-box">
+				<svg class="complex-link__svg-icon svg-icon svg-icon--40"><use xlink:href="#svg-icon-placeholder"></use></svg>
+				@@if(context.label) {
+				<span class="complex-link__label">@@label</span>
+				}
+			</div>
+		</div>
+		<div class="complex-link__cell-txt">
+			@@if(context.sup) {
+			<sup>@@sup</sup>
+			}
+			@@if(context.title) {
+			<strong>@@title</strong>
+			}
+		</div>
+	</a>
+</div>

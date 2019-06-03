@@ -1,0 +1,39 @@
+
+<div class="top-search">
+	<div class="top-search__row">
+		<div class="top-search__cell-input">
+			<input type="text" class="top-search__input text-input text-input--top-search" @@if(context.placeholder){placeholder="@@placeholder"}>
+		</div>
+		@@if(context.filter) {
+		<div class="top-search__cell-filter">
+			<select class="top-search__filter select select--block js-select" data-placeholder-txt="Все категории">
+				<option value="0">Все категории</option>
+				<option value="1">Инструменты</option>
+				<option value="2">Сад и огород</option>
+				<option value="3">Стройматериалы</option>
+				<option value="4">Строительное оборудование</option>
+				<option value="5">Ремонт и декор</option>
+				<option value="6">Сантехника</option>
+				<option value="7">Электрика и свет</option>
+				<option value="8">Бытовая техника</option>
+				<option value="9">Товары для дома</option>
+				<option value="10">Лаки и краски</option>
+				<option value="11">Спецодежда</option>
+				<option value="12">Автотовары</option>
+				<option value="13">Отдых и туризм</option>
+				<option value="14">Мебель</option>
+			</select>
+		</div>
+		}
+		<div class="top-search__cell-action">
+			<button type="button" class="top-search__btn btn">
+				@@if(context.searchButtonIcon) {
+				<svg class="btn__icon btn__icon--left svg-icon svg-icon--dd-arrow"><use xlink:href="#@@searchButtonIcon"></use></svg>
+				}
+				@@if(context.searchButtonTxt) {
+				<span class="btn__inner">@@searchButtonTxt</span>
+				}
+			</button>
+		</div>
+	</div>
+</div>

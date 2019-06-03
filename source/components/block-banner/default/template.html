@@ -1,0 +1,37 @@
+
+<a href="#" class="block-banner block-banner-size @@if(context.centerMode){block-banner--center} @@if(context.lg){block-banner--lg} @@if(context.sm){block-banner--sm} @@if(context.dark){block-banner--dark}">
+	<div class="block-banner__image-cover" style="background-image: url(@@image)"></div>
+	<div class="block-banner__sizer">
+		<img src="@@image" alt="">
+	</div>
+	@@if(context.h2 || context.h3 || context.text || context.buttonText) {
+	<div class="block-banner__content">
+		<div class="block-banner__content-top">
+			@@if(context.h2) {
+			<h2 class="block-banner__title flc">@@h2</h2>
+			}
+			@@if(context.h3) {
+			<h3 class="block-banner__title flc">@@h3</h3>
+			}
+			@@if(context.text) {
+			<div class="block-banner__text flc">@@text</div>
+			}
+		</div>
+		@@if(context.buttonText) {
+		<div class="block-banner__content-bottom">
+			@@if(context.buttonText) {
+			<span class="btn @@if(!context.lg){btn--sm} @@if(context.btnClass){@@btnClass}">
+				@@if(context.buttonLeftIcon) {
+				<svg class="btn__icon btn__icon--left svg-icon svg-icon--20"><use xlink:href="#@@buttonRightIcon"></use></svg>
+				}
+				<span class="btn__inner">@@buttonText</span>
+				@@if(context.buttonRightIcon) {
+				<svg class="btn__icon btn__icon--right btn__icon--arrow svg-icon svg-icon--20"><use xlink:href="#@@buttonRightIcon"></use></svg>
+				}
+			</span>
+			}
+		</div>
+		}
+	</div>
+	}
+</a>

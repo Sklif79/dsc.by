@@ -1,0 +1,40 @@
+{
+	"name": "templates.newsite.by",
+	"version": "0.1.0",
+	"description": "New Site templates library.",
+	"homepage": "https://bitbucket.org/newsite/git.templates.newsite.by#readme",
+	"author": {
+		"name": "Peter Yatsevich",
+		"email": "yatsevich@newsite.by"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/newsite/git.templates.newsite.by.git"
+	},
+	"main": "gulpfile.js",
+	"dependencies": {
+		"autoprefixer": "^9.2.0",
+		"browser-sync": "^2.18.0",
+		"css-mqpacker": "^5.0.1",
+		"del": "^2.2.0",
+		"gulp": "4.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^1.1.0",
+		"gulp-minify-css": "^1.2.4",
+		"gulp-postcss": "^6.4.0",
+		"gulp-remove-empty-lines": "^0.0.8",
+		"gulp-rename": "^1.2.2",
+		"gulp-requirejs": "^1.0.0",
+		"gulp-uglify": "^3.0.0",
+		"postcss-advanced-variables": "^1.2.0",
+		"postcss-calc": "^5.3.1",
+		"postcss-clean": "^1.1.0",
+		"postcss-conditionals": "2.1.0",
+		"postcss-easy-import": "^2.0.0",
+		"postcss-for": "^2.1.1",
+		"postcss-mixins": "^6.2.0",
+		"requirejs": "^2.3.5",
+		"requirejs-vue": "^1.1.1"
+	},
+	"private": true
+}

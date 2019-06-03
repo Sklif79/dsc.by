@@ -1,0 +1,35 @@
+/* --- dropdowns --- */
+.dropdown-owner{position: relative;}
+.dropdown-arrow-owner{position: relative;}
+.dropdown-arrow-owner::before{content: ''; position: absolute; bottom: 0; left: 50%; margin-left: -$dropdown-arrow-size-h; 
+	border: $dropdown-arrow-size-h solid transparent; border-top: none; border-bottom: $dropdown-arrow-size-v solid #fff;
+	-ms-transform: scaleY(0); -webkit-transform: scaleY(0); transform: scaleY(0);
+	-ms-transform-origin: center bottom; -webkit-transform-origin: center bottom; transform-origin: center bottom;
+	z-index: 101; opacity: 0; transition: $transition-dropdown;}
+.dropdown-owner.open .dropdown-arrow-owner::before,
+.dropdown-owner.alt-open .dropdown-arrow-owner::before,
+.dropdown-arrow-owner.open::before,
+.dropdown-arrow-owner.alt-open::before{opacity: 1; -ms-transform: scaleY(1); -webkit-transform: scaleY(1); transform: scaleY(1);}
+
+.dropdown{position: absolute; top: 100%; left: 0; padding: $dropdown-padding-base-v $dropdown-padding-base-h; border-radius: $border-radius-dropdown; 
+	max-width: calc(100vw - 20px); white-space: normal; cursor: default;
+	background-color: $color-white; box-shadow: 0px 3px 10px rgba(0,0,0,.2); z-index: 100; 
+	font-weight: $fw-base; font-size: $fz-base; line-height: lh-base; color: $text-color; text-align: left;
+	-ms-transform-origin: center top; -webkit-transform-origin: center top; transform-origin: center top;}
+.dropdown--manual,
+.dropdown--alt{opacity: 0; -ms-transform: scaleY(0); -webkit-transform: scaleY(0); transform: scaleY(0) translate3d(0,0,0); pointer-events: none; transition: transform $transition-dropdown, opacity $transition-dropdown;}
+.dropdown-owner.open{z-index: 100;}
+.dropdown-owner.open .dropdown--manual,
+.dropdown--alt.alt-open{opacity: 1; -ms-transform: scaleY(1); -webkit-transform: scaleY(1); transform: scaleY(1) translate3d(0,0,0); pointer-events: all;}
+
+.dropdown--md{width: 280px;}
+
+.dropdown--city-select{min-width: 280px;}
+.dropdown--personal-menu{width: 220px;}
+.dropdown--contct-info{width: 265px;}
+.dropdown--sign{width: 230px;}
+.dropdown--basket{width: 470px; overflow: hidden;
+    right: 0;
+    left: inherit !important;
+}
+

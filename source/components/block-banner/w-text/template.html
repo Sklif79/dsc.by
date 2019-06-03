@@ -1,0 +1,44 @@
+
+<a href="#" class="block-banner-w-text @@if(context.sm){block-banner-w-text--sm} @@if(context.centerMode){block-banner-w-text--center} @@if(context.disabled){block-banner-w-text--disabled}">
+	@@if(context.image) {
+	<div class="block-banner-w-text__image block-banner-size flc">
+		<div class="block-banner-w-text__image-cover" style="background-image: url(@@image)"></div>
+		<img src="@@image" alt="">
+	</div>
+	}
+	@@if(context.label) {
+		<span class="block-banner-w-text__label @@if(context.labelFuture){block-banner-w-text__label--future} @@if(context.labelDisabled){block-banner-w-text__label--disabled}">@@label</span>
+	}
+	@@if(context.h3) {
+	<h3 class="block-banner-w-text__title flc">
+		@@if(context.countdown) {
+		<span class="block-banner-w-text__title-counter">
+			<small-countdown end-time="2017-07-10T18:00:00"></small-countdown>
+		</span>
+		}
+		<span class="block-banner-w-text__title-txt">@@h3</span>
+		@@if(context.sup) {
+		<sup class="block-banner-w-text__title-sup">@@sup</sup>
+		}
+	</h3>
+	}
+	@@if(context.h4) {
+	<h4 class="block-banner-w-text__title flc">
+		@@if(context.countdown) {
+		<span class="block-banner-w-text__title-counter">
+			<small-countdown end-time="2017-07-10T18:00:00" end-text="Акция завершена"></small-countdown>
+		</span>
+		}
+		<span class="block-banner-w-text__title-txt">@@h4</span>
+		@@if(context.sup) {
+		<sup class="block-banner-w-text__title-sup">@@sup</sup>
+		}
+	</h4>
+	}
+	@@if(context.text) {
+	<div class="block-banner-w-text__text flc">@@text</div>
+	}
+	@@if(context.date) {
+	<div class="block-banner-w-text__date flc">@@date</div>
+	}
+</a>

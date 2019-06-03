@@ -1,0 +1,107 @@
+
+@@if(!context.headless) {
+<nav class="page-header-menu js-main-menu">
+}
+	<div class="container">
+		<div class="page-header-menu__row">
+			<folded-menu-header name="Каталог" back close-main-menu-nav></folded-menu-header>
+			<div class="page-header-menu__item page-header-menu__item--wide-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Парфюмерия</span>
+				</a>
+				@@include("source/components/main-menu-dd/default/template.html", {
+					"style": "wide",
+					"banners": true,
+					"product": false,
+					"name": "Парфюмерия"
+				})
+			</div>
+			<div class="page-header-menu__item page-header-menu__item--wide-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Макияж</span>
+				</a>
+				@@include("source/components/main-menu-dd/default/template.html", {
+					"style": "wide",
+					"banners": false,
+					"product": true,
+					"name": "Макияж"
+				})
+			</div>
+			<!--
+			<div class="page-header-menu__item page-header-menu__item--short-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Уход за кожей</span>
+				</a>
+				@@include("source/components/main-menu-dd/default/template.html", {
+					"style": "short",
+					"banners": false,
+					"product": false,
+					"name": "Уход за кожей"
+				})
+			</div>-->
+			<div class="page-header-menu__item page-header-menu__item--wide-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Уход за кожей</span>
+				</a>
+				@@include("source/components/main-menu-dd/default/template.html", {
+					"style": "short",
+					"banners": false,
+					"product": false,
+					"name": "Уход за кожей"
+				})
+			</div>
+			<div class="page-header-menu__item page-header-menu__item--wide-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Уход за волосами</span>
+				</a>
+				@@include("source/components/main-menu-dd/default/template.html", {
+					"style": "short",
+					"banners": false,
+					"product": true,
+					"name": "Уход за волосами"
+				})
+			</div>
+			<div class="page-header-menu__item page-header-menu__item--wide-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Мужчинам</span>
+				</a>
+				@@include("source/components/main-menu-dd/default/template.html", {
+					"style": "short",
+					"banners": true,
+					"product": false,
+					"name": "Мужчинам"
+				})
+			</div>
+			<div class="page-header-menu__item page-header-menu__item--brands-dd js-dropdown js-main-menu-item">
+				<a href="#" class="page-header-menu__link js-dropdown__btn">
+					<span class="page-header-menu__link-txt">Бренды</span>
+				</a>
+				@@include("source/components/main-menu-dd/brands/template.html",
+					"name": "Бренды"
+				})
+			</div>
+			<div class="page-header-menu__item">
+				<a href="#" class="page-header-menu__link">
+					<span class="page-header-menu__link-txt">Подарки</span>
+				</a>
+			</div>
+			<div class="page-header-menu__item">
+				<a href="#" class="page-header-menu__link">
+					<span class="page-header-menu__link-txt">Акции</span>
+				</a>
+			</div>
+			<div class="page-header-menu__item">
+				<a href="#" class="page-header-menu__link">
+					<span class="page-header-menu__link-txt">Новинки</span>
+				</a>
+			</div>
+			<div class="page-header-menu__item page-header-menu__item--hl">
+				<a href="#" class="page-header-menu__link">
+					<span class="page-header-menu__link-txt">Скидки</span>
+				</a>
+			</div>
+		</div>
+	</div>
+@@if(!context.headless) {
+</nav>
+}

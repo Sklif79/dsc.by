@@ -1,0 +1,30 @@
+top-banner,
+.top-banner{display: block; text-align: center; font-size: $fz-base; line-height: $lh-base; position: relative; padding: 8px 0; cursor: default; background: $color-primary; color: $color-white;}
+top-banner .container,
+.top-banner .container{padding: 0 84px;}
+.top-banner__close{position: absolute; top: 0; right: 0; width: 84px; height: 44px; cursor: pointer; transition: $transition-link; color: inherit;}
+.top-banner__close .svg-icon{width: 20px; height: 20px; position: absolute; top: 50%; left: 50%; margin: -10px 0 0 -10px;}
+top-banner a,
+.top-banner a,
+.no-touch top-banner a:hover,
+.no-touch .top-banner a:hover{color: $color-white; border-bottom-color: $color-white;}
+.no-touch top-banner a:hover,
+.no-touch .top-banner a:hover{opacity: .7;}
+.no-touch .top-banner__close:hover{opacity: .7;}
+
+
+
+@media (max-width: $screen-sm-max) {
+	top-banner .container,
+	.top-banner .container{padding: 0 40px;}
+	.top-banner__close{width: 40px;}
+}
+
+
+
+@media (max-width: $screen-2xs-max) {
+	top-banner,
+	.top-banner{text-align: left;}
+	top-banner .container,
+	.top-banner .container{padding: 0 40px 0 10px;}
+}

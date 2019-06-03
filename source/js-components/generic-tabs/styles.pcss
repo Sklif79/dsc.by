@@ -1,0 +1,73 @@
+/* --- generic tabs --- */
+.generic-tabs{position: relative;}
+.generic-tabs__nav{background: linear-gradient(to right, $color-gray-light, $color-gray-light) no-repeat 0 100% / 100% 1px; padding-top: 5px;
+	font-size: 0; overflow-x: auto; overflow-y: hidden; white-space: nowrap;}
+.generic-tabs__label--label{display: inline-block; vertical-align: bottom; margin-right: 1px; cursor: pointer; transition: $transition-base;
+	color: $color-black; font-size: $fz-base; line-height: $lh-base; font-weight: $fw-bold; padding: 10px 30px; 
+	border: 1px solid transparent; border-bottom: none; }
+.generic-tabs__label--label.active{color: $color-black; cursor: default; background: $color-white; padding-top: 15px; margin-top: -5px; margin-right: 0; 
+	border-color: $color-gray-light; border-top-left-radius: $border-radius-large; border-top-right-radius: $border-radius-large;}
+.generic-tabs__label--btn{margin: 0 10px 10px 0;}
+.generic-tabs__label--btn.active{cursor: default;}
+.generic-tabs__tabs{ border: 1px solid $color-gray-light; border-top: none;}
+.generic-tabs__radio{display: none;}
+.generic-tabs__radio .rich-form-row{margin-bottom: 10px;}
+
+.floor-header + .generic-tabs--buttons{margin-top: -20px;}
+.generic-tabs--buttons .generic-tabs__nav{margin-bottom: 30px; background: transparent; text-align: center; padding-top: 0; display: none;}
+.generic-tabs--buttons .generic-tabs__tabs{border: none; padding: 0;}
+
+.generic-tabs__tabs {
+	padding: 0;
+}
+.generic-tabs__nav {
+	border: 1px solid #E8E8E8;
+	border-bottom: none;
+	padding: 0 15px;
+}
+.generic-tabs__label--label {
+	border: none;
+	padding: 25px 0;
+	margin: 0 15px;
+	position: relative;
+	font-weight: 300;
+}
+.generic-tabs__label--label.active {
+	border: none;
+	background: none;
+	padding-top: 25px;
+	margin-top: 0;
+
+	font-weight: 300;
+}
+.generic-tabs__label--label.active:after{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	height: 3px;
+	border-radius: 3px;
+	left: 0;
+	width:100%;
+	background:#4683C4 ;
+}
+
+@media (max-width: $screen-sm-max) {
+	.generic-tabs__tabs{padding: 20px;}
+	.generic-tabs__label--label{padding: 10px 20px;}
+}
+
+
+
+@media (max-width: $screen-xs-max) {
+	.generic-tabs--to-radio .generic-tabs__tabs{border: none; padding: 0;}
+	.generic-tabs--to-radio .generic-tabs__nav{display: none;}
+	.generic-tabs--to-radio .generic-tabs__radio{display: block; margin-bottom: 20px;}
+}
+
+
+@media (max-width: $screen-2xs-max) {
+	.generic-tabs__tabs{padding: 20px 10px;}
+	.generic-tabs__label--label{padding: 8px 10px;}
+	.generic-tabs__label--label.active{padding-bottom: 10px; margin-top: -4px; padding-top: 10px;}
+}

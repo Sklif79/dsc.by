@@ -1,0 +1,31 @@
+/* --- basket full --- */
+basket-full{height: 400px; display: block; font-size: 0; text-align: center;}
+basket-full::after{content: ''; display: inline-block; height: 100%; vertical-align: middle;}
+basket-full [slot]{display: none;}
+
+.basket-full{display: table; width: 100%; table-layout: fixed;}
+.basket-full__main,
+.basket-full__aside{display: table-cell; vertical-align: top;}
+.basket-full__aside{padding-left: 50px; width: 36.25%;}
+.basket-full__main-blocks,
+.basket-full__main-products{margin: 25px 0;}
+.basket-full__products-list .product:last-child{border-bottom: none;}
+.basket-full__group{margin: 40px 0;}
+.basket-full__group-title{padding-bottom: 20px; border-bottom: 1px solid $color-gray-light;}
+
+
+
+@media (max-width: $screen-md-max) {
+	/* --- basket full --- */
+	.basket-full__aside{width: 39%;}
+}
+
+
+
+@media (max-width: $screen-sm-max) {
+	/* --- basket full --- */
+	.basket-full,
+	.basket-full__main, 
+	.basket-full__aside{display: block; width: auto;}
+	.basket-full__aside{padding: 0; margin-top: 25px;}
+}

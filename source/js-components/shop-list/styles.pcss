@@ -1,0 +1,48 @@
+/* --- shop list --- */
+.shop-list__filter,
+.shop-list__list{margin: 30px 0;}
+.shop-list__li{margin: 0 -25px -1px; padding: 15px 25px; border-top: 1px solid $color-gray-light; border-bottom: 1px solid $color-gray-light;}
+.shop-list__map yandex-map,
+.shop-list__map .ymap-container{display: block; height: 400px; background-color: $color-gray-light;}
+
+.modal .shop-list__map yandex-map,
+.shop-list__map .ymap-container{margin: 0 -25px -50px; overflow: hidden; 
+	border-bottom-left-radius: $border-radius-base; border-bottom-right-radius: $border-radius-base;}
+
+
+
+/* --- shop li --- */
+.shop-li__top{display: -webkit-flex; display: -ms-flex; display: flex; font-size: $fz-small; line-height: $lh-small; margin-bottom: 4px;}
+.shop-li__top:last-child{margin-bottom: 0;}
+.shop-li__top-ruler{-webkit-flex-grow: 100; -ms-flex-grow: 100; flex-grow: 100; padding: 0 5px;}
+.shop-li__top-ruler::after{content: ''; display: inline-block; vertical-align: baseline; width: 100%; height: 1px; min-width: 20px;
+	background: linear-gradient(to right, $color-gray 0px, $color-gray 1px, transparent 1px, transparent 4px) repeat-x 0 0 / 4px 1px;}
+.shop-li__top-start,
+.shop-li__top-end{max-width: 60%;}
+.shop-li__top-end{width: 160px;}
+
+.shop-li__top-start-icon{margin-right: 6px; margin-left: -4px; color: $color-primary;}
+.shop-li__top-start-txt{vertical-align: top; color: $color-gray-dark; text-transform: uppercase; letter-spacing: 1px;}
+
+.shop-li__addr{margin-top: 4px;}
+.shop-li__time{font-size: $fz-small; line-height: $lh-small; color: $color-gray-dark; margin-top: 4px;}
+
+.shop-li__grid{margin: 0 -20px -5px 0;}
+.shop-li__grid-col{padding: 0 20px 5px 0; font-size: $fz-base;}
+
+
+
+@media (max-width: $screen-sm-max) {
+	/* --- shop list --- */
+	.shop-list__li{margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px;}
+	.modal .shop-list__map yandex-map,
+	.shop-list__map .ymap-container{margin-left: -20px; margin-right: -20px;}
+}
+
+
+
+@media (max-width: $screen-3xs-max) {
+	/* --- shop list --- */
+	.shop-li__top-end{width: auto; text-align: right;}
+	.shop-li__top-end .avail-marker__text{white-space: nowrap;}
+}

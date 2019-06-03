@@ -1,0 +1,109 @@
+/* --- rich form btns --- */
+.rich-form-btns {
+  font-size: 0;
+  margin: $grid-gutter-base -$grid-gutter-base -$grid-gutter-base 0;
+  text-align: center;
+}
+
+.rich-form-btns:first-child {
+  margin-top: 0;
+}
+
+.rich-form-btns .btn {
+  vertical-align: top;
+  margin: 0 $grid-gutter-base $grid-gutter-base 0;
+}
+
+
+/* --- rich form btns line --- */
+.rich-form-btns-line {
+  display: table;
+  width: 100%;
+  margin-top: 45px;
+}
+
+.rich-form-btns-line__main {
+  display: table-cell;
+  width: 99%;
+  vertical-align: top;
+}
+
+.rich-form-btns-line__aside {
+  display: table-cell;
+  width: 1px;
+  vertical-align: middle;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+
+
+/* --- rich-form-link --- */
+.rich-form-link {
+  margin: 10px 0;
+}
+
+.rich-form-row + .rich-form-link {
+  margin-top: -10px;
+}
+
+.rich-form-link + .rich-form-btns {
+  margin-top: 20px;
+}
+
+
+/* --- rich-form-message --- */
+.rich-form-message {
+  margin: 10px 0;
+}
+
+.rich-form-message:first-child {
+  margin-top: 0;
+}
+
+.rich-form-message:last-child {
+  margin-bottom: 0;
+}
+
+.rich-form-message + .rich-form-row {
+  margin-top: 20px;
+}
+
+.rich-form-message--error {
+  color: $color-error;
+}
+
+
+/* --- rich form grid --- */
+.rich-form-grid {
+  width: calc(100% + 20px);
+  margin: 0 -20px -20px 0;
+}
+
+.rich-form-grid__col {
+  padding: 0 20px 20px 0;
+}
+
+.label-text__hl {
+  padding-left: 21px;
+  color: #777777;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+
+@media (max-width: $screen-xs-max) {
+  /* --- rich-form-btns-line --- */
+  .rich-form-btns-line,
+  .rich-form-btns-line__main,
+  .rich-form-btns-line__aside {
+    display: block;
+    width: auto;
+    white-space: normal;
+    text-align: center;
+  }
+  .rich-form-btns-line__aside {
+    padding: 0;
+    margin-top: 20px;
+  }
+}

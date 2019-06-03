@@ -1,0 +1,76 @@
+/* --- line no reviews --- */
+.like-no-reviews__action{margin: 20px -20px -20px 0;}
+.like-no-reviews__action .btn{margin: 0 20px 20px 0;}
+.like-no-reviews__text,
+.like-no-reviews__title{margin: 10px 0;}
+
+
+
+/* --- user reviews --- */
+.user-reviews__header{display: table; width: 100%; table-layout: fixed; margin-bottom: 25px;}
+.user-reviews__header-title,
+.user-reviews__header-stars{display: table-cell; vertical-align: baseline;}
+.user-reviews__header-title{width: 220px; padding-right: 20px;}
+.user-reviews__list-item{margin-bottom: 35px;}
+.user-reviews__list-item:last-child{margin-bottom: 0;}
+.user-reviews__actions{font-size: 0; margin: 25px -20px -20px 0;}
+.user-reviews__actions .btn{margin: 0 20px 20px 0;}
+
+
+
+/* --- review --- */
+.review{display: table; width: 100%; table-layout: fixed;}
+.review__aside,
+.review__main{display: table-cell; vertical-align: top;}
+.review__aside{width: 220px; padding-right: 20px;}
+.review__title,
+.review__text-block{margin-bottom: 6px;}
+.review__title:first-child{margin-top: -5px;}
+.review__rating{margin-bottom: 8px;}
+.review__author,
+.review__date,
+.review__aside-key,
+.review__aside-value{font-size: $fz-small; line-height: $lh-small;}
+.review__author,
+.review__aside-key{font-weight: $fw-bold; margin-top: 8px;}
+.review__votes{margin-top: 10px; font-size: 0; line-height: 0; cursor: default;}
+.review__votes-label,
+.review__votes-like,
+.review__votes-dislike{display: inline-block; vertical-align: top; margin-right: 15px; font-size: $fz-small; line-height: $lh-small;}
+.review__votes-label{margin-right: 20px; color: $color-gray;}
+
+
+
+/* --- voting-hand --- */
+.voting-hand{display: inline-table; vertical-align: top; cursor: pointer; font-size: $fz-small; line-height: $lh-small;} 
+.voting-hand__icon,
+.voting-hand__value{display: table-cell; vertical-align: middle;}
+.voting-hand__value{padding-left: 8px;}
+.voting-hand__icon{color: $color-gray; transition: $transition-link;}
+.voting-hand__icon .svg-icon{width: 20px; height: 20px; vertical-align: top;}
+.voting-hand--like{color: $color-success;}
+.voting-hand--dislike{color: $color-error;}
+.voting-hand--neutral{color: $color-gray;}
+.no-touch .voting-hand--like:hover .voting-hand__icon{color: $color-success;}
+.no-touch .voting-hand--dislike:hover .voting-hand__icon{color: $color-error;}
+
+
+
+@media (max-width: $screen-2xs-max) {
+	/* --- review --- */
+	.review,
+	.review__aside,
+	.review__main{display: block; width: auto;}
+	.review__aside{margin-bottom: 15px;}
+}
+
+
+
+@media (max-width: $screen-3xs-max) {
+	/* --- user reviews --- */
+	.user-reviews__header,
+	.user-reviews__header-title,
+	.user-reviews__header-stars{display: block; width: auto;}
+	.user-reviews__header-title{padding: 0;}
+	.user-reviews__header-stars{margin-top: 4px;}
+}

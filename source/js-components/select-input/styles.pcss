@@ -1,0 +1,92 @@
+/* --- selects --- */
+.select{display: inline-block; height: $input-height-base; background: $input-bg; border: $input-border; border-radius: $input-border-radius; 
+	padding: $input-padding-t calc($input-padding-h + 16px) $input-padding-b $input-padding-h; box-shadow: $input-shadow;
+	font: $input-fw $input-fz/$input-lh $ff-base; text-align: left; 
+	cursor: pointer; position: relative; transition: $transition-input; outline: none; vertical-align: top;}
+.select select{display: none;}
+/*.touch .select select{display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; padding: 0; width: 100%; height: 100%; z-index: 10;}*/
+.select.placeholder-state .select-value{color: $input-placeholder-color;}
+.select-chevron.select-chevron{position: absolute; right: 10px; top: 50%; color: $color-gray; transform: translateY(-50%); transition: $transition-input;}
+
+.no-touch .select:hover{border-color: $input-border-color-hover;}
+.select.open.open{border-color: $input-border-color-focus; z-index: 30;}
+.select.open .select-chevron.select-chevron{
+	-ms-transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); transform: translateY(-50%) rotate(180deg);}
+
+
+.select-label-txt{display: inline-block; vertical-align: middle; margin-right: 4px;}
+.select-value{pointer-events: none; white-space: nowrap; max-width: calc(100% - 20px); text-overflow: ellipsis; display: inline-block; vertical-align: middle; overflow: hidden; color: $text-color; transition: .2s;}
+.select.placeholder-state .select-value{opacity: 0; transform: translateY(10px);}
+.select.placeholder-state li.active{color: $text-color; cursor: pointer; font-weight: 400;}
+
+.select-placeholder{position: absolute; top: 50%; margin-top: calc(-0.5 * $input-lh); left: $input-padding-h; right: $input-padding-h; overflow: hidden; 
+	color: $input-placeholder-color; transition: $transition-input; text-overflow: ellipsis;}
+.select:not(.placeholder-state) .select-placeholder{opacity: 0; transform: translateY(-10px);}
+
+.select-list{position: absolute; top: 100%; left: 0; min-width: 100%; margin-top: 5px; max-height: 50vh; width: inherit;
+	background-color: $color-white; box-shadow: 0px 1px 8px rgba(0,0,0,.3); border-radius: $border-radius-base;
+	transition: $transition-input; opacity: 0; z-index: 10; overflow: auto; white-space: normal; word-break: break-word;
+	-ms-transform-origin: center top; -webkit-transform-origin: center top; transform-origin: center top; cursor: default;
+	-ms-transform: scaleY(0); -webkit-transform: scaleY(0); transform: scaleY(0);}
+.select-list li{padding: 4px 10px; font-size: $fz-base; font-weight: $fw-base; line-height: $lh-base; color: $color-black; 
+	cursor: pointer; transition: $transition-link;}
+.no-touch .select-list li:hover,
+.no-touch .select-list li:focus{color: $color-black; outline: none; background-color: $color-gray-light;}
+.select-list li.active,
+.select-list li.active:hover{color: $color-white; cursor: default; background: $color-primary-alt;}
+.select-list li.disabled,
+.select-list li.disabled:hover{color: $color-gray; cursor: default; pointer-events: none; text-decoration: line-through;}
+.select-list.open,
+.select.open .select-list,
+.select-list-owner.open .select-list{-ms-transform: scaleY(1); -webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
+.select-list-owner{position: relative;}
+.select-list-owner .select-list{margin-top: 0;}
+
+.text-guide .select-list li{padding-left: 10px; margin: 0;}
+.text-guide .select-list li::before{display: none;}
+.select--block{display: block; width: 100%;}
+.select--lite{padding: $input-padding-t-lite $input-padding-h-lite $input-padding-b-lite; height: $input-height-lite;}
+.select--sm{padding: $input-padding-t-sm $input-padding-h-sm $input-padding-b-sm; height: $input-height-sm; 
+	font-size: $input-fz-sm; font-weight: $input-fw-sm; line-height: $input-lh-sm;}
+
+/* -- unstyled tmp --- */
+.select--multiple .select-list li{padding: 4px 10px 4px 52px; position: relative; background: transparent; cursor: pointer; font-size: 15px; line-height: 20px;}
+.select--multiple .select-list li::before,
+.select--multiple .select-list li::after{content: ''; position: absolute; transition: .2s;}
+.select--multiple .select-list li::before{left: 20px; top: 6px; width: 20px; height: 20px; border-radius: 4px; border: 1px solid #c6c6c6; background-color: #fff;}
+.select--multiple .select-list li::after{top: 11px; left: 24px; border-left: 3px solid #fff; border-bottom: 3px solid #fff; width: 12px; height: 7px; opacity: 0;
+	-ms-transform: rotate(-45deg) scale(.0); -webkit-transform: rotate(-45deg) scale(.0); transform: rotate(-45deg) scale(.0);}
+.select--multiple .select-list li.active{font-weight: 400; background: transparent; color: #303030; cursor: pointer;}
+.select--multiple .select-list li:focus{background: transparent;}
+.select--multiple .select-list li.disabled:focus{color: #919191;}
+.select--multiple .select-list li.active::before{border-color: #87b726; background-color: #87b726;}
+.select--multiple .select-list li.active::after{opacity: 1; 
+	-ms-transform: rotate(-45deg) scale(1); -webkit-transform: rotate(-45deg) scale(1); transform: rotate(-45deg) scale(1);}
+.no-touch .select--multiple .select-list li:hover{background: transparent;}
+.no-touch .select--multiple .select-list li:not(.disabled):hover{color: #ef6b01;}
+.no-touch .select--multiple .select-list li:not(.disabled):hover::before{border-color: #87b726;}
+.no-touch .select--multiple .select-list li.active:hover::before{opacity: .6;}
+
+@if $input-border-bottom-mode == true {
+	.select{border-top: none; border-left: none; border-right: none;}
+	.select-chevron.select-chevron{right: 0;}
+}
+
+.optionExtra {
+	padding-top: 25px;
+}
+.optionExtra__line {
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.optionExtra__param {
+	color: $color-gray;
+}
+.optionExtra__data {
+	font-weight: bold;
+}
+.instore {color: #9AB410;}
+.noinstore {color: $color-red;}

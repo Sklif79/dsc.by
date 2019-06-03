@@ -1,0 +1,28 @@
+<page-header type="checkout">
+	<page-header-top slot="top">
+		<page-header-top-item slot="left" link="#" class="hidden-sm">
+			<span slot="name">Бесплатная доставка по РБ от 15 руб.</span>
+			<!--<dropdown slot="dropdown" class="dropdown--contct-info">
+				<folded-menu-header slot="folded-menu-header" name="Контакты" back close-dropdown></folded-menu-header>
+				<div slot="content">
+					<h5 class="contact-info-title flc">Горячая линия</h5>
+					@@include("source/components/contact-info/default/template.html")
+				</div>
+			</dropdown>-->
+		</page-header-top-item>
+		
+		<page-header-top-item slot="right" icon="svg-icon-phone" name="(8 029) 387-47-33">
+			<dropdown slot="dropdown" class="dropdown--contct-info">
+				<div slot="content">
+					<h5 class="contact-info-title flc">Горячая линия</h5>
+					@@include("source/components/contact-info/default/template.html")
+				</div>
+			</dropdown>
+		</page-header-top-item>
+	</page-header-top>
+	<page-header-main-3 slot="main">
+		<a href="#" class="logo" slot="logo">
+			<svg class="svg-icon"><use xlink:href="#svg-icon-logo-xs"></use></svg>
+		</a>
+	</page-header-main-3>
+</page-header>

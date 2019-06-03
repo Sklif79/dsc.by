@@ -1,0 +1,17 @@
+/* --- system message --- */
+.system-message{display: table; width: 100%; padding: 15px 25px; margin: 20px 0; background-color: $color-gray-light; border-radius: $border-radius-base;}
+.system-message__text,
+.system-message__close{display: table-cell; vertical-align: top;}
+.system-message__text{width: 99%;}
+.system-message__close{width: 1px;}
+.system-message__close-btn{background: transparent; padding: 15px; width: 50px; height: 50px; margin: -15px -25px -15px 0; display: block; cursor: pointer; transition: $transition-base;}
+.system-message__close-btn .svg-icon{vertical-align: top;}
+.no-touch .system-message__close-btn:hover{color: $color-primary-alt;}
+.system-message--error{background-color: $color-error-light;}
+.system-message--tip{position: absolute; bottom: 100%; left: 0; padding: 5px 10px; font-size: $fz-small; line-height: $lh-small; width: 210px; text-align: left; z-index: 10;}
+.system-message--tip::after{content: ''; position: absolute; top: 100%; left: 15px; border: 6px solid transparent; border-bottom: none; border-top-color: $color-gray-light;}
+.system-message--tip .system-message__close-btn{padding: 7px; width: 34px; height: 34px; margin: -5px -10px -5px 0;}
+.system-message--tip.system-message--error{background: $color-error; color: $color-white;}
+.system-message--tip.system-message--error::after{border-top-color: $color-error;}
+.system-message--tip.system-message--error  .system-message__close-btn{color: $color-white;}
+.system-message--tip.system-message--error  .system-message__close-btn:hover{opacity: .7;}

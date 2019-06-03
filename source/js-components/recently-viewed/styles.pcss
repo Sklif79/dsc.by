@@ -1,0 +1,33 @@
+/* --- recently viewed slider --- */
+.floor--recently-viewed{max-height: 220px; transform: translate3d(0,0,0);}
+
+
+
+/* --- recently viewed item --- */
+.recently-viewed-item,
+.recently-viewed-item.slick-side,
+.recently-viewed-item.slick-side-offset-item{padding-left: 13px; padding-right: 13px; display: -webkit-flex; display: -ms-flex; display: flex;}
+.recently-viewed-item__img-box{position: relative; max-width: 100px; text-align: center; font-size: 0; transition: $transition-link;
+	-ms-flex-grow: 1; -webkit-flex-grow: 1; flex-grow: 1;}
+.recently-viewed-item__img-cover{padding-top: 100%; background: no-repeat center / 100% auto; background-size: contain;}
+.recently-viewed-item__link{position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: none; background: $color-white; 
+	transition: $transition-link; opacity: 0;}
+.recently-viewed-item__no-photo-icon{position: absolute; width: 100%; height: 100%; top: 0; left: 0; color: $color-gray; box-shadow: 0 0 0 1px $color-gray-light inset; padding: 10px;}
+.recently-viewed-item__remove{position: absolute; top: 0; right: 0; width: 20px; height: 20px; padding: 0; font-size: 0; line-height: 0;
+	text-align: center; cursor: pointer; transition: $transition-link; opacity: 0; transition: $transition-link;}
+.touch .recently-viewed-item__remove{width: 30px; height: 30px; opacity: 1; top: -10px; right: 0; border-radius: $border-radius-base; background-color: $color-error; color: $color-white; opacity: .7;}
+.recently-viewed-item__remove::after{content: ''; display: inline-block; vertical-align: middle; height: 100%;}
+.no-touch .recently-viewed-item:hover .recently-viewed-item__remove{opacity: 1;}
+.no-touch .recently-viewed-item__remove:hover{color: $link-color-hover;}
+.no-touch .recently-viewed-item__link:hover{opacity: .3; border: none;}
+/*.no-touch .recently-viewed-item__link:hover{box-shadow: $block-banner-image-shadow-hover; opacity: $block-banner-opacity-hover; border: none;}*/
+
+.recently-viewed-slide-enter-active, .recently-viewed-slide-leave-active{transition: .5s; overflow: hidden;}
+.recently-viewed-slide-enter, .recently-viewed-slide-leave-to{max-height: 0; opacity: 0; padding-top: 0; margin-bottom: -45px;}
+
+
+
+@media (max-width: $screen-xs-max) {
+	/* --- recently viewed item --- */
+	.recently-viewed-item__img-box{max-width: 70px;}
+}

@@ -1,0 +1,255 @@
+/* --- rich text input --- */
+.rich-text-input {
+  display: flex;
+  position: relative;
+}
+
+.rich-text-input__prefix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $input-placeholder-color;
+  font: $input-fw $input-fz/$input-lh $input-ff;
+  pointer-events: none;
+}
+
+.rich-text-input__message {
+  display: block;
+  font-size: $fz-small;
+  line-height: $lh-small;
+  margin-top: 8px;
+  opacity: .7;
+}
+
+.rich-text-input__message--error {
+  color: $color-error;
+}
+
+.rich-text-input__suggestions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: auto;
+  z-index: 100;
+}
+
+.rich-text-input__label {
+  /*font: $input-label-fw $input-label-fz/$input-label-lh $ff-base;*/
+}
+
+.rich-text-input--w-label .rich-text-input__input {
+  padding-top: $input-padding-t;
+  padding-bottom: $input-padding-b;
+  height: $input-height-base;
+  background-color: $color-white;
+}
+
+.rich-text-input--w-label textarea.rich-text-input__input {
+  height: $textarea-height-base;
+}
+
+.rich-text-input--w-label:not(.filled) input:not(:focus)::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+.rich-text-input--w-label:not(.filled) input:not(:focus)::-moz-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+.rich-text-input--w-label:not(.filled) input:not(:focus):-moz-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+.rich-text-input--w-label:not(.filled) input:not(:focus):-ms-input-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+.no-touch .rich-text-input__input:hover ~ .rich-text-input__label {
+  color: $input-placeholder-color-hover;
+}
+
+.no-touch .rich-text-input__input:focus ~ .rich-text-input__label,
+.touch .rich-text-input__input:focus ~ .rich-text-input__label {
+  color: $input-placeholder-color-focus;
+}
+
+.rich-text-input--textarea .rich-text-input__label {
+  background-color: $color-white;
+}
+
+.rich-text-input--textarea .rich-text-input__input {
+  padding-bottom: $input-padding-b-lite;
+}
+
+.rich-text-input--w-prefix .rich-text-input__input {
+  text-align: right;
+}
+
+.rich-text-input--sm .rich-text-input__prefix {
+  font-size: $fz-small;
+}
+
+.rich-text-input--file .rich-text-input__input {
+  height: auto;
+  border: 1px dashed #518AC7;
+  background: transparent;
+  border-radius: 8px;
+  padding: 15px 50px 15px 70px;
+  position: relative;
+  min-height: 65px;
+}
+
+
+.rich-text-input .rich-text-input__input.disabled ~ .rich-text-input__label,
+.rich-text-input .rich-text-input__input:disabled ~ .rich-text-input__label {
+  color: $input-placeholder-color-disabled;
+}
+
+.text-input.text-input.disabled,
+.text-input.text-input:disabled {
+  border-color: $input-border-color-disabled;
+  color: $input-color-disabled;
+  cursor: not-allowed;
+}
+
+input.rich-text-input__input[type=checkbox] + .rich-text-input__label {
+
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label {
+  position: relative;
+  padding-left: 41px;
+  cursor: pointer;
+  color: #777777 !important;
+  font-size: 14px;
+  line-height: 15px;
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+}
+
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 30px;
+  width: 31px;
+  border: 1px solid #D2D1D1;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+  content: '\2714';
+  width: 18px;
+  height: 18px;
+  font-size: 28px;
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+@if $input-border-bottom-mode == true {
+  .rich-text-input__border {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    margin-top: -2px;
+    background-color: $color-primary;
+    transition: $transition-input;
+    -webkit-transform: scaleX(0);
+    transform: translate3d(0, 0, 0) scaleX(0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  .rich-text-input__input:focus ~ .rich-text-input__border {
+    -webkit-transform: scaleX(1);
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+}
+
+@if $input-border-bottom-mode == false {
+  .rich-text-input {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    position: relative;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .rich-text-input__border {
+    display: none;
+  }
+}
+
+@if $input-dynamic-label-mode == true {
+  .rich-text-input__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    cursor: text;
+    pointer-events: none;
+    height: $input-height-base;
+    padding: $input-padding-t $input-padding-h $input-padding-b;
+    text-align: left;
+    color: $input-placeholder-color;
+    transition: $transition-input;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .rich-text-input__input:focus ~ .rich-text-input__label,
+  .rich-text-input.filled .rich-text-input__label {
+    padding-top: $input-folded-label-pt;
+    padding-bottom: $input-folded-label-pb;
+    font-size: $input-folded-label-fz;
+    line-height: $input-folded-label-lh;
+    color: $input-placeholder-color-filled;
+    height: 20px;
+  }
+}
+
+@if $input-dynamic-label-mode == false {
+  .rich-text-input__label {
+    display: block;
+    cursor: default;
+    text-align: left;
+    color: $input-placeholder-color;
+    transition: $transition-input;
+  }
+  .rich-text-input__label {
+    -ms-order: -1;
+    -webkit-order: -1;
+    order: -1;
+  }
+}

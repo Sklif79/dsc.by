@@ -1,0 +1,45 @@
+/* --- slider products --- */
+.js-supported slider-products,
+.js-supported .slider-products:not(.slick-initialized){display: block; height: 450px; overflow: hidden;}
+.js-supported slider-products .brand-slide,
+.js-supported .slider-products:not(.slick-initialized) .product-slide{visibility: hidden;}
+
+.slider-products .slick-list{padding: 0; margin: -12px 0;}
+.no-touch .slider-products{position: relative; z-index: 0; margin: 0 -10px; width: calc(100% + 20px); transition: z-index $transition-base; height: 380px;}
+.no-touch .slider-products .slick-list{padding-bottom: 0; overflow: visible;}
+ .slider-products .slick-prev{left: calc(100% - 90px);}
+ .slider-products .slick-next{right: 14px;}
+.slider-products .slick-arrow{ top: -35px;}
+.no-touch .slider-products:hover{z-index: 30;}
+.no-touch .slider-products .slick-dots{margin-top: calc( 0 - 15px - $slider-dots-size + $slider-dots-offset); margin-bottom: calc(155px + 12px + $slider-dots-size - $slider-dots-offset); position: static; z-index: -1;}
+.no-touch .slider-products--no-tail{margin-bottom: 0;}
+.no-touch .slider-products--no-tail .slick-dots{bottom: $slider-dots-offset;}
+
+.touch .slider-products .slick-dots{position: static; margin: calc($slider-dots-offset-outside - $slider-dots-margin) 0 0;}
+
+.slider-products--related .rating-stars__star{width: 10px; height: 10px; margin-top: 4px;}
+.slider-products--related .rating-block__count{display: none;}
+
+
+.no-touch .floor--slider-products{margin-bottom: 0; width: calc(100% - 2px);}
+.no-touch .floor--slider-products:last-child{margin-bottom: 70px;}
+
+
+/* --- product-slide --- */
+.product-slide{padding: 12px;}
+.product-slide,
+.product-slide.slick-slide{display: -webkit-flex; display: -ms-flex; display: flex;}
+.slider-products:not(.slick-animated):not(:active) .product-slide.slick-slide:not(.slick-active){visibility: hidden;}
+.product-slide .product__link::before{display: none;}
+
+
+
+@media (max-width: $screen-xs-max) {
+	/* --- slider products --- */
+	/*.no-touch .slider-products .slick-dots{margin-top: calc(-100px + $slider-dots-offset-outside-xs - $slider-dots-margin-xs); margin-bottom: calc(100px - $slider-dots-offset-outside-xs + $slider-dots-margin-xs);}*/
+
+
+
+	/* --- product slide --- */
+	.product-slide .product__image-container{max-width: 140px;}
+}

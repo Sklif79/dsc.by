@@ -1,0 +1,26 @@
+/* --- reviews slide --- */
+.reviews-slide{padding: 40px;}
+.reviews-slide__header{margin-bottom: 10px;}
+.reviews-slide__title{display: inline; font-weight: $fw-bold; margin-right: 20px;}
+.reviews-slide__meta{display: inline-block; color: $color-gray-dark; font-size: $fz-xs; line-height: $lh-xs;}
+.reviews-slide__review,
+.reviews-slide__answer{margin-bottom: 40px;}
+.reviews-slide__review:last-child,
+.reviews-slide__answer:last-child{margin-bottom: 0;}
+.reviews-slide__answer .reviews-slide__body{padding: 15px 30px; border-radius: $border-radius-large; background: $color-gray-light-2;}
+.reviews-slide__body p{margin: 8px 0;}
+.reviews-slide__body p:first-child{margin-top: 0;}
+.reviews-slide__body p:last-child{margin-bottom: 0;}
+
+
+
+@media (max-width: $screen-md-max) {
+    /* --- reviews slide --- */
+    .reviews-slide{padding: 30px;}
+    .reviews-slide__answer .reviews-slide__body{padding: 15px 25px;}
+}
+
+
+@media (max-width: $screen-sm-max) {
+	.reviews-slide{padding: 20px;}
+}

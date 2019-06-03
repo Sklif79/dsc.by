@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Акции", 
+		"/actions/", 
+		Array(), 
+		Array("SYMBOL"=>"%", "CLASS"=>"color-red"), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка", 
+		"/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оплата", 
+		"/payment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Где купить", 
+		"/shops/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

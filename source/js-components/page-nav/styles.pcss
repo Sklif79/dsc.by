@@ -1,0 +1,121 @@
+/* --- page nav --- */
+.page-nav {
+  position: relative;
+  z-index: 1;
+  padding-top: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.page-nav__more + .page-nav__pages {
+  margin-top: 25px;
+}
+
+.page-nav__pages {
+  /*border-top: 1px solid $color-gray-light;*/
+  font-size: 0;
+}
+
+.page-nav__item {
+  border: 1px solid $color-gray-light;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.page-nav__item::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.page-nav__item-txt {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $fz-base;
+  line-height: $lh-base;
+}
+
+.catalog-list + .page-nav {
+  margin-top: 10px;
+}
+
+.no-touch .page-nav__item:hover {
+  /*border-top-color: $color-primary;
+  border-bottom: none;*/
+}
+
+.page-nav__item--current,
+.no-touch .page-nav__item--current:hover {
+  color: $color-black;
+  font-weight: $fw-bold;
+  /*border-top-color: $color-primary;*/
+  cursor: default;
+}
+
+
+/* --- page nav btn --- */
+.page-nav-btn {
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  width: 40px;
+  height: 38px;
+  position: relative;
+  outline: none;
+  transition: $transition-btn;
+  color: $color-black;
+  font-size: 0;
+  line-height: 0;
+  font-weight: $fw-light;
+}
+
+.page-nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  right: 0px;
+  bottom: 4px;
+  border: $focus-border-base;
+  opacity: 0;
+  transition: $transition-btn;
+}
+
+.page-nav-btn::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.page-nav-btn__txt {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $fz-base;
+  line-height: $lh-base;
+}
+
+.no-touch .page-nav-btn:hover {
+  border-bottom: 0;
+  background-color: #C7DAED;
+  font-weight: bold;
+}
+
+.page-nav-btn--current,
+.no-touch .page-nav-btn--current:hover {
+  background-color: $color-primary-alt;
+  color: $color-white;
+  font-weight: $fw-bold;
+  cursor: default;
+}
+
+.page-nav-btn:focus::before {
+  opacity: 1;
+}
+
+.page-nav__item--btn {
+  border-radius: 4px;
+}
+.page-nav__item--page:first-child, .page-nav__item--page:first-child .page-nav-btn {border-radius: 4px 0 0 4px;}
+.page-nav__item--page:last-child, .page-nav__item--page:last-child .page-nav-btn {border-radius: 0 4px 4px 0;}

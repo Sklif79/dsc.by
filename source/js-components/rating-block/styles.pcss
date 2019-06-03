@@ -1,0 +1,24 @@
+/* --- rating block --- */
+.rating-block{display: table; max-width: 100%; font-size: $fz-xs; line-height: $lh-small; cursor: default;}
+.rating-block__stars,
+.rating-block__count{display: table-cell; vertical-align: middle; width: 1px; white-space: nowrap;}
+.rating-block__count{padding-left: 8px; color: $color-gray-dark; font-weight: $fw-light;}
+.rating-block .rating-stars{vertical-align: middle; margin-top: -3px;}
+.rating-block--md{font-size: $fz-small;}
+.rating-block--md .rating-block__count{color: $color-black;}
+.rating-block--xs .rating-stars__star{width: 10px; height: 10px; margin-top: 3px;}
+
+
+
+/* --- rating stars --- */
+.rating-stars{font-size: 0; line-height: 0; position: relative; display: inline-block; vertical-align: middle; white-space: nowrap; transform: translate3d(0,0,0);}
+.rating-stars__star{display: inline-block; vertical-align: top; width: 14px; height: 14px; margin-right: 1px;}
+.rating-stars__star:last-child{margin-right: 0;}
+.rating-stars__empty .rating-stars__star{color: $color-gray;}
+.rating-stars__full{position: absolute; top: 0; left: 0; overflow: hidden;}
+.rating-stars__full .rating-stars__star{color: $color-primary-alt;}
+.rating-stars--input .rating-stars__star{width: 22px; height: 20px; cursor: pointer; margin: 0; border-right: 2px solid transparent; transition: $transition-link;}
+.rating-stars--input .rating-stars__full{pointer-events: none;}
+.rating-stars--input:hover .rating-stars__full{opacity: 0; visibility: hidden; transition: $transition-link ease $transition-link;}
+.rating-stars--input:hover .rating-stars__empty .rating-stars__star{color: $color-primary-alt;}
+.rating-stars--input .rating-stars__empty .rating-stars__star:hover ~ .rating-stars__star{color: $color-gray;}

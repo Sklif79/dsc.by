@@ -1,0 +1,101 @@
+/* --- top search lite --- */
+.top-search-lite{position: absolute; left: 0; top: 50%; margin-top: calc(-$input-height-lite / 2); transition: $top-search-lite-transition; width: 220px;}
+.top-search-open .top-search-lite{position: absolute; left: 50%; margin-left: -355px; width: 710px; z-index: 110;}
+body:not(.top-search-open) .top-search-lite__results{display: none;}
+
+
+
+/* --- top search lite box --- */
+.top-search-lite-box{position: relative;}
+.top-search-lite-box__input{height: $input-height-lite; padding: $input-padding-t-lite 30px $input-padding-b-lite;}
+.top-search-lite-box__btn,
+.top-search-lite-box__close{position: absolute; border: none; background: transparent; width: 30px; top: 0; height: $input-height-lite; 
+	color: $text-color; font-size: 0; padding: 0; cursor: pointer; transition: $transition-base;}
+.top-search-lite-box__btn::after,
+.top-search-lite-box__close::after{content: ''; display: inline-block; vertical-align: middle; height: 100%;}
+.top-search-lite-box__btn{left: 0; text-align: left;}
+.top-search-lite-box__close{right: 0; text-align: right; transition: $transition-base, opacity $top-search-lite-transition, visibility $top-search-lite-transition;}
+.top-search-lite-box__btn .svg-icon,
+.top-search-lite-box__close .svg-icon{width: 20px; height: 20px;}
+.top-search-lite-box__close{opacity: 0; visibility: hidden;}
+.top-search-lite-box::after{content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; cursor: pointer;}
+.no-touch .top-search-lite-box:hover .top-search-lite-box__input{border-bottom-color: $input-border-color-hover;}
+
+.top-search-open .top-search-lite-box__btn,
+.top-search-open .top-search-lite-box__close{color: rgba(255,255,255,.7);}
+.top-search-open .top-search-lite-box__close{opacity: 1; visibility: visible;}
+.top-search-open.no-touch .top-search-lite-box__btn:hover,
+.top-search-open.no-touch .top-search-lite-box__close:hover{color: rgba(255,255,255,1);}
+
+.top-search-open .top-search-lite-box::after{display: none;}
+.top-search-open .top-search-lite-box__input{color: $input-white-color; border-color: $input-white-border-color;}
+.top-search-open.no-touch .top-search-lite-box__input:hover{border-color: $input-white-border-color-hover;}
+.top-search-open.no-touch .top-search-lite-box__input:focus,
+.top-search-open		  .top-search-lite-box__input:focus{border-color: $input-white-border-color-focus;}
+.top-search-open.no-touch .top-search-lite-box:hover .top-search-lite-box__input{border-color: $input-white-border-color-hover;}
+
+.top-search-open .top-search-lite-box__input::-webkit-input-placeholder{color: rgba(0,0,0,.5);}
+.top-search-open .top-search-lite-box__input::-moz-placeholder{color: rgba(0,0,0,.5);}
+.top-search-open .top-search-lite-box__input:-moz-placeholder{color: rgba(0,0,0,.5);}
+.top-search-open .top-search-lite-box__input:-ms-input-placeholder{color: rgba(0,0,0,.5);}
+
+
+
+/* --- top search results --- */
+.top-search-results{position: absolute; top: 100%; left: 0; right: 0; margin-top: 6px; padding: 20px; white-space: normal;
+	background-color: $color-white; color: $text-color; border-radius: $border-radius-base; box-shadow: $box-shadow-base;}
+.top-search-results__categories{font-size: 0; padding: 0 0 0 15px; margin: -20px -20px -1px; border-bottom: 1px solid $color-gray-light;}
+.top-search-results__categories-link{display: inline-block; vertical-align: top; margin-right: 25px; padding: 10px 0 8px; 
+	border-bottom: 2px solid rgba(255,255,255,0); font-size: $fz-small; font-weight: $fw-light; line-height: 20px;
+	cursor: pointer; transition: $transition-base;}
+.top-search-results__categories-link.active{border-bottom-color: $color-primary; cursor: default;}
+.no-touch .top-search-results__categories-link:hover{color: $color-primary;}
+.no-touch .top-search-results__categories-link.active:hover{color: $color-black;}
+
+.top-search-results__link{display: block; margin: 0 -20px; padding: 14px 15px 14px 50px; font-size: $fz-base; line-height: $lh-base; 
+	border-bottom: 1px solid $color-gray-light; position: relative; transition: $transition-base; color: $color-black;}
+.top-search-results__link:last-child{border-bottom: none;}
+.top-search-results__link-icon{position: absolute; top: 15px; left: 15px; width: 20px; height: 20px; transition: $transition-base;}
+.top-search-results__link-icon .svg-icon{color: $color-primary; width: 100%; height: 100%; vertical-align: top;}
+.top-search-results__link-sup{vertical-align: top; color: $color-gray-dark; font-size: $fz-xs; line-height: $lh-xs; margin-left: 4px;}
+.no-touch .top-search-results__link:hover{border-bottom-color: $color-gray-light; color: $color-primary;}
+.no-touch .top-search-results__link:last-child:hover{border-bottom: none;}
+.no-touch .top-search-results__link:hover .top-search-results__link-icon{-webkit-transform: translateX(5px); transform: translate3d(5px,0,0);}
+
+.top-search-results__list{max-height: calc(100vh - 220px); overflow-y: auto; overflow-x: hidden; padding: 0 20px; margin: 0 -20px;}
+
+.top-search-results__list .product{margin-left: -20px; margin-right: -20px;}
+.top-search-results__list .product:last-child{border-bottom: none;}
+
+.top-search-results__botom-links{margin-top: 10px;}
+
+
+
+@media (max-width: $screen-xs-max) {
+	/* --- top search lite box --- */
+	.top-search-lite-box{margin-left: -20px; margin-right: -20px;}
+	.top-search-lite-box__btn{width: 50px; padding-left: 20px;}
+	.top-search-lite-box__close{width: 50px; padding-right: 20px;}
+	.top-search-lite-box__input{border-bottom-color: $color-gray-light; padding-left: 50px; padding-right: 50px;}
+
+
+
+	/* --- top-search-lite --- */
+	.top-search-lite{position: static; width: 100%; margin: 0;}
+	.top-search-open .top-search-lite.top-search-lite{position: relative; width: 100%; margin: 0; left: auto; right: auto;}
+}
+
+
+
+@media (max-width: $screen-4xs-max) {
+	/* --- top search results --- */
+	.top-search-results__link{padding: 14px 15px;}
+	.top-search-results__link-icon{display: none;}
+}
+
+
+
+@media (max-width: $screen-header-menu-folding), (min-width: $screen-header-top-folding) and (max-width: $screen-md-max) {
+	/* --- top search lite --- */
+	.top-search-open .top-search-lite{left: calc(50vw - 60px);}
+}

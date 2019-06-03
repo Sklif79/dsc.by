@@ -1,0 +1,252 @@
+IBLOCK
+21
+------------------------------
+arP
+Array
+(
+    [ID] => 7
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 9
+    [RIGHT_MARGIN] => 10
+    [DEPTH_LEVEL] => 4
+    [NAME] => Ид
+    [VALUE] => 99ef7edf-e2d7-11e8-810c-001e679ce6ff
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 8
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 11
+    [RIGHT_MARGIN] => 12
+    [DEPTH_LEVEL] => 4
+    [NAME] => НомерВерсии
+    [VALUE] => AAAAAAAFepY=
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 9
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 13
+    [RIGHT_MARGIN] => 14
+    [DEPTH_LEVEL] => 4
+    [NAME] => ПометкаУдаления
+    [VALUE] => false
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 10
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 15
+    [RIGHT_MARGIN] => 16
+    [DEPTH_LEVEL] => 4
+    [NAME] => Наименование
+    [VALUE] => Не отображать на сайте
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 11
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 17
+    [RIGHT_MARGIN] => 18
+    [DEPTH_LEVEL] => 4
+    [NAME] => Внешний
+    [VALUE] => false
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 12
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 19
+    [RIGHT_MARGIN] => 20
+    [DEPTH_LEVEL] => 4
+    [NAME] => Информационное
+    [VALUE] => true
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 13
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 21
+    [RIGHT_MARGIN] => 22
+    [DEPTH_LEVEL] => 4
+    [NAME] => ТипЗначений
+    [VALUE] => Справочник
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 14
+    [PARENT_ID] => 6
+    [LEFT_MARGIN] => 23
+    [RIGHT_MARGIN] => 36
+    [DEPTH_LEVEL] => 4
+    [NAME] => ВариантыЗначений
+    [VALUE] => 
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arProperty
+Array
+(
+    [IBLOCK_ID] => 21
+    [ACTIVE] => Y
+    [XML_ID] => 99ef7edf-e2d7-11e8-810c-001e679ce6ff
+    [NAME] => Не отображать на сайте
+    [PROPERTY_TYPE] => L
+)
+
+------------------------------
+IBLOCK
+24
+------------------------------
+arP
+Array
+(
+    [ID] => 12
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 19
+    [RIGHT_MARGIN] => 20
+    [DEPTH_LEVEL] => 4
+    [NAME] => Ид
+    [VALUE] => 99ef7edf-e2d7-11e8-810c-001e679ce6ff
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 13
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 21
+    [RIGHT_MARGIN] => 22
+    [DEPTH_LEVEL] => 4
+    [NAME] => НомерВерсии
+    [VALUE] => AAAAAAAFepY=
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 14
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 23
+    [RIGHT_MARGIN] => 24
+    [DEPTH_LEVEL] => 4
+    [NAME] => ПометкаУдаления
+    [VALUE] => false
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 15
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 25
+    [RIGHT_MARGIN] => 26
+    [DEPTH_LEVEL] => 4
+    [NAME] => Наименование
+    [VALUE] => Не отображать на сайте
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 16
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 27
+    [RIGHT_MARGIN] => 28
+    [DEPTH_LEVEL] => 4
+    [NAME] => Внешний
+    [VALUE] => false
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 17
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 29
+    [RIGHT_MARGIN] => 30
+    [DEPTH_LEVEL] => 4
+    [NAME] => Информационное
+    [VALUE] => true
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 18
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 31
+    [RIGHT_MARGIN] => 32
+    [DEPTH_LEVEL] => 4
+    [NAME] => ТипЗначений
+    [VALUE] => Справочник
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arP
+Array
+(
+    [ID] => 19
+    [PARENT_ID] => 11
+    [LEFT_MARGIN] => 33
+    [RIGHT_MARGIN] => 46
+    [DEPTH_LEVEL] => 4
+    [NAME] => ВариантыЗначений
+    [VALUE] => 
+    [ATTRIBUTES] => 
+)
+
+------------------------------
+arProperty
+Array
+(
+    [IBLOCK_ID] => 24
+    [ACTIVE] => Y
+    [XML_ID] => 99ef7edf-e2d7-11e8-810c-001e679ce6ff
+    [NAME] => Не отображать на сайте
+    [PROPERTY_TYPE] => L
+)
+
+------------------------------

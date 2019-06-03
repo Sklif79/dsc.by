@@ -1,0 +1,22 @@
+
+<div class="contact-info flc">
+	<div class="contact-info__tel">
+		<a href="tel:+375290000000" class="contact-info__tel-link">+375 29 387-47-33</a>
+	</div>
+	<small class="contact-info__note">Пн–пт с 9:00 до 18:00</small>
+</div>
+
+@@if(context.showButtons) {
+<div class="contact-info-btns">
+	@@if(context.showCall) {
+	<button type="button" class="btn btn--sm js-open-modal" data-modal-url="/ajax/modal-call.php">
+		<span class="btn__inner">Заказать звонок</span>
+	</button> 
+	}
+	@@if(context.showMessage) {
+	<button type="button" class="btn btn--sm js-open-modal" data-modal-url="/ajax/modal-message.php">
+		<span class="btn__inner">Написать нам</span>
+	</button>
+	}
+</div>
+}
