@@ -227,6 +227,37 @@ $(function(){
         rez = ratio * val; 
              $(this).closest('.compare-item__param').find('.ratio_').text(rez.toFixed(2)); 
     })
+
+
+    //in stock list
+    $('.js_in-stock').on('click', function (e) {
+       $(this).next('.js_in-stock-list').slideToggle({
+           complete: function () {
+               if (!$(this).is(':visible')) {
+                   $('.in-stock-table').removeClass('scrollable');
+               }
+           },
+
+           start: function () {
+               if ($(this).is(':visible') && ($(this).find('.in-stock-table__rows li').length > 7)) {
+                   $(this).find('.in-stock-table').addClass('scrollable');
+               }
+           }
+       });
+    });
+
+    $(document).on('click', function (e) {
+        var $list = $('.js_in-stock-list');
+
+        if (
+            $list.is(':visible')
+            && !$(e.target).closest('.js_in-stock').length
+            && !$(e.target).closest('.js_in-stock-list').length
+        ) {
+            e.preventDefault();
+            $list.slideUp();
+        }
+    });
      
     
 });
