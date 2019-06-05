@@ -18,7 +18,7 @@
 }
 
 .availability-sm__text {
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #9AB410;
     transition: border-color 0.1s;
     cursor: pointer;
 }
@@ -83,3 +83,17 @@
     color: #fff;
     background: #4384C5;
 }
+
+.product__instore  {
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: 1px solid #9AB410;
+    line-height: 18px;
+}
+
+.product__instore-wrap, .optionExtra__in-stock-wrap {
+    position: relative;
+    z-index: 10;
+}
+
+
