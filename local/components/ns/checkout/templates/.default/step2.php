@@ -77,50 +77,59 @@
                                                     <? } ?>
                                                     <div class="optionExtra__line">
                                                         <div class="optionExtra__param">Статус товара</div>
-                                                        <div class="optionExtra__data-time"><span
-                                                                    class="<?= $punkt['STATUS_CLASS']; ?>"><?= $punkt['STATUS']; ?></span>
+                                                        <div class="optionExtra__data-time">
+                                                            <span
+                                                                    class="<?= $punkt['STATUS_CLASS']; ?> js_in-stock"><?= $punkt['STATUS']; ?></span>
+                                                            <? if ($_REQUEST["dev"] == "y") {
+                                                                $mass_sclad = array();
+                                                                foreach ($arResult["ORDER_INFO"]["ITEMS"] as $key => $value) {
+                                                                    $select_fields = Array();
+                                                                    $arFilter = Array("ACTIVE" => "Y", "PRODUCT_ID" => $value['ID']);
+                                                                    $res = CCatalogStoreProduct::GetList(Array(), $arFilter, false, false, Array());
+                                                                    $product['amount_new'] = [];
+                                                                    $sum_kol = 0;
+                                                                    $i = 0;
+                                                                    while ($arRes = $res->GetNext()) {
+                                                                        $mass_sclad[$i]["count"] += $arRes["AMOUNT"];
+                                                                        $mass_sclad[$i]["name"] = $arRes["STORE_NAME"];
+                                                                        $mass_sclad["summ"] += $arRes["AMOUNT"];
+                                                                        $i++;
+                                                                    }
+                                                                }
+                                                                ?>
+                                                                <div style="display: none;" class="js_in-stock-list">
+                                                                    <ul class="in-stock-table">
+                                                                        <?
+                                                                        if ($mass_sclad["summ"] > 0) {
+                                                                            ?>
+                                                                            <li class="in-stock-table__header"><div>Доступно всего:</div><div><?= $mass_sclad["summ"] ?> шт.</div>
+                                                                            </li>
+                                                                            <?
+                                                                        }
+                                                                        ?>
+                                                                    </ul>
+                                                                    <ul class="in-stock-table in-stock-table__rows">
+                                                                        <?
+                                                                        foreach ($mass_sclad as $key => $value) {
+                                                                            if ($value["name"] != "") {
+                                                                                ?>
+                                                                                <li class="in-stock-table__row">
+                                                                                    <div><?= $value["name"] ?></div>
+                                                                                    <div><?= $value["count"] ?> шт.</div>
+                                                                                </li>
+
+                                                                                <?
+                                                                            }
+                                                                        }
+
+                                                                        ?>
+                                                                    </ul>
+                                                                </div>
+                                                                <?
+                                                            } ?>
                                                         </div>
                                                     </div>
-                                                    <? if ($_REQUEST["dev"] == "y") {
-                                                        $mass_sclad = array();
-                                                        foreach ($arResult["ORDER_INFO"]["ITEMS"] as $key => $value) {
-                                                            $select_fields = Array();
-                                                            $arFilter = Array("ACTIVE" => "Y", "PRODUCT_ID" => $value['ID']);
-                                                            $res = CCatalogStoreProduct::GetList(Array(), $arFilter, false, false, Array());
-                                                            $product['amount_new'] = [];
-                                                            $sum_kol = 0;
-                                                            $i = 0;
-                                                            while ($arRes = $res->GetNext()) {
-                                                                $mass_sclad[$i]["count"] += $arRes["AMOUNT"];
-                                                                $mass_sclad[$i]["name"] = $arRes["STORE_NAME"];
-                                                                $mass_sclad["summ"] += $arRes["AMOUNT"];
-                                                                $i++;
-                                                            }
-                                                        }
-                                                        ?>
-                                                        <ul>
-                                                            <?
-                                                            foreach ($mass_sclad as $key => $value) {
-                                                                if ($value["name"] != "") {
-                                                                    ?>
-                                                                    <li>
-                                                                        <b><?= $value["name"] ?></b> -
-                                                                        <b><?= $value["count"] ?></b>
-                                                                    </li>
 
-                                                                    <?
-                                                                }
-                                                            }
-                                                            if ($mass_sclad["summ"] > 0) {
-                                                                ?>
-                                                                <li>Общее количество: <b><?= $mass_sclad["summ"] ?></b>
-                                                                </li>
-                                                                <?
-                                                            }
-                                                            ?>
-                                                        </ul>
-                                                        <?
-                                                    } ?>
                                                     <? if ($punkt['STATUS_CLASS'] == 'noinstore') { ?>
                                                         <div class="optionExtra__line">
                                                             <div class="optionExtra__data-time"><span

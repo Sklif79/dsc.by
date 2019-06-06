@@ -17,23 +17,13 @@
     position: relative;
 }
 
-.availability-sm__text {
-    border-bottom: 1px solid #9AB410;
-    transition: border-color 0.1s;
-    cursor: pointer;
-}
-
-.availability-sm__text:hover {
-    border-color: #9AB410;
-}
-
 .in-stock-table {
     position: absolute;
     display: table;
     z-index: 100;
     background: #fff;
     left: 0;
-    top: 20px;
+    top: 23px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     border-collapse: collapse;
     table-layout: fixed;
@@ -43,7 +33,7 @@
 }
 
 .in-stock-table__rows {
-    top: 54px;
+    top: 57px;
 }
 
 .in-stock-table__rows.scrollable {
@@ -87,13 +77,27 @@
 .product__instore  {
     cursor: pointer;
     display: inline-block;
-    border-bottom: 1px solid #9AB410;
+    border-bottom: 1px solid transparent;
     line-height: 18px;
 }
 
 .product__instore-wrap, .optionExtra__in-stock-wrap {
     position: relative;
     z-index: 10;
+}
+
+.optionExtra__data-time {
+    position: relative;
+}
+
+.js_in-stock-list ul {
+    margin: 0;
+}
+
+.js_in-stock {
+    border-bottom: 1px solid #9AB410;
+    cursor: pointer;
+    transition: border-color 0.1s;
 }
 
 
