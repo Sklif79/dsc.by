@@ -231,19 +231,21 @@ $(function(){
 
     //in stock list
     $('.js_in-stock').on('click', function (e) {
-       $(this).next('.js_in-stock-list').slideToggle({
-           complete: function () {
-               if (!$(this).is(':visible')) {
-                   $('.in-stock-table').removeClass('scrollable');
-               }
-           },
+        $('.js_in-stock').not($(this)).next('.js_in-stock-list').slideUp(0);
 
-           start: function () {
-               if ($(this).is(':visible') && ($(this).find('.in-stock-table__rows li').length > 7)) {
-                   $(this).find('.in-stock-table').addClass('scrollable');
-               }
-           }
-       });
+        $(this).next('.js_in-stock-list').slideToggle({
+            complete: function () {
+                if (!$(this).is(':visible')) {
+                    $('.in-stock-table').removeClass('scrollable');
+                }
+            },
+
+            start: function () {
+                if ($(this).is(':visible') && ($(this).find('.in-stock-table__rows li').length > 7)) {
+                    $(this).find('.in-stock-table').addClass('scrollable');
+                }
+            }
+        });
     });
 
     $(document).on('click', function (e) {
@@ -258,6 +260,10 @@ $(function(){
             $list.slideUp();
         }
     });
+
+    // $('.js-select-list li').on('click',function () {
+    //     console.log($(this).data('value'));
+    // })
      
     
 });
