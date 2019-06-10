@@ -100,4 +100,7 @@
     transition: border-color 0.1s;
 }
 
-
+.container--for-products-slider {
+    padding-bottom: 340px;
+    margin-bottom: -340px;
+}
