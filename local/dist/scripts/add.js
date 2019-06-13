@@ -261,9 +261,15 @@ $(function(){
         }
     });
 
-    // $('.js-select-list li').on('click',function () {
-    //     console.log($(this).data('value'));
-    // })
-     
-    
+    $(document).ready(function () {
+        $('.in-stock-table__rows').each(function () {
+            if ($(this).is(':empty')) {
+                $(this)
+                    .closest('.js_in-stock-list')
+                    .parent()
+                    .find('.js_in-stock')
+                    .css('border-color', 'transparent');
+            }
+        });
+    });
 });
