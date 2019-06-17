@@ -230,7 +230,7 @@ $(function(){
 
 
     //in stock list
-    $('.js_in-stock').on('click', function (e) {
+    $(document).on('click', '.js_in-stock', function (e) {
         $('.js_in-stock').not($(this)).next('.js_in-stock-list').slideUp(0);
 
         $(this).next('.js_in-stock-list').slideToggle({
